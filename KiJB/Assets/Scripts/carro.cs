@@ -49,14 +49,14 @@ public class carro : MonoBehaviour
         voltas++;
         UnityEngine.Debug.Log("Volta Realizada " + voltas.ToString());
     }
-    
+
     void FixedUpdate()
     {
         acc = podeAcelerar ? Input.GetAxis("Vertical") : 0f;
 
         for (int i = 0; i < guiar.Length; i++)
         {
-            guiar[i].steerAngle = guia * 15f ; //Permite o carro virar
+            guiar[i].steerAngle = guia * 15f; //Permite o carro virar
             guiar[i].motorTorque = 0.1f;              //N�o perminte o carro parar
         }
 
@@ -65,25 +65,25 @@ public class carro : MonoBehaviour
         rpm = veloKMH * raioMudancas[mudancaAtual] * 15f;
 
         //mudancas
-        if(rpm>maxRPM)
+        if (rpm > maxRPM)
         {
             mudancaAtual++;
-            if(mudancaAtual != raioMudancas.Length)
+            if (mudancaAtual != raioMudancas.Length)
             {
                 mudancaAtual--;
             }
         }
-        if(rpm<minRPM)
+        if (rpm < minRPM)
         {
             mudancaAtual--;
-            if(mudancaAtual<0)
+            if (mudancaAtual < 0)
             {
                 mudancaAtual = 0;
             }
         }
 
         //forcas
-        if(acc<-0.1f)
+        if (acc < -0.1f)
         {
             rb.AddForce(-transform.forward * forcaTravagem);
             acc = 0;
@@ -91,13 +91,5 @@ public class carro : MonoBehaviour
 
         forcaFinal = transform.forward * (maxTorque / (mudancaAtual + 1) + maxTorque / 3f) * acc;
         rb.AddForce(forcaFinal);   //Permiete o carro andar
-    }
-
-    void OnGUI()
-    {
-        GUI.Label(new Rect(200, 20, 128, 32), veloKMH + "KM/H");
-        GUI.Label(new Rect(200, 50, 128, 32), rpm + "RPM");
-        GUI.Label(new Rect(200, 70, 128, 32), (mudancaAtual+1).ToString());
-        GUI.Label(new Rect(200, 90, 128, 32), forcaFinal.magnitude.ToString());
     }
 }
