@@ -16,11 +16,11 @@ public class carro : MonoBehaviour
 
     public float forcaTravagem;
 
-    float veloKMH;
-    float rpm;
+    public float veloKMH;
+    public float rpm;
 
     public float[] raioMudancas;
-    int mudancaAtual = 0;
+    public int mudancaAtual = 0;
 
     public float minRPM;
     public float maxRPM;
