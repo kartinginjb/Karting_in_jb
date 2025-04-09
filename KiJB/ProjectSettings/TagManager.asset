@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Select_menu
+  - Jogador
   layers:
   - Default
   - TransparentFX

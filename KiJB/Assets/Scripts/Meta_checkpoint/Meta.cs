@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Meta : MonoBehaviour
 {
+    public Cronometro cronometro;
     Checkpoint[] checkpoints;
     private void Awake()
     {
@@ -25,6 +26,10 @@ public class Meta : MonoBehaviour
 
         x.SomarVolta();
         ResetCheckpoints();
+
+        cronometro.PararCronometro();
+        Debug.Log("Tempo final: " + cronometro.ObterTempoFinal().ToString("F2"));
+        cronometro.ComecarCronometro();
     }
 
     void ResetCheckpoints()
