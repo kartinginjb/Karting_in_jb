@@ -52,12 +52,12 @@ public class carro : MonoBehaviour
 
     void FixedUpdate()
     {
-        acc = podeAcelerar ? Input.GetAxis("Vertical") : 0f;
+        acc = podeAcelerar ? Input.GetAxis("Vertical") : 0f;    //Define quando o carro pode andar no fim da contagem das luzes
 
         for (int i = 0; i < guiar.Length; i++)
         {
-            guiar[i].steerAngle = guia * 15f; //Permite o carro virar
-            guiar[i].motorTorque = 0.1f;              //N�o perminte o carro parar
+            guiar[i].steerAngle = guia * 15f;           //Permite o carro virar
+            guiar[i].motorTorque = 0.1f;                //N�o perminte o carro parar
         }
 
         //Velocidade e rpm
