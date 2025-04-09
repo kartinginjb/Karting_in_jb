@@ -48,8 +48,6 @@ public class StartingLights : MonoBehaviour
 
         carro.podeAcelerar = true;
 
-        cronometro.ComecarCronometro();
-
         yield return new WaitForSeconds(1.5f);
         green.enabled = false;
     }
