@@ -56,7 +56,7 @@ public class carro : MonoBehaviour
 
         for (int i = 0; i < guiar.Length; i++)
         {
-            guiar[i].steerAngle = guia * 15f;           //Permite o carro virar
+            guiar[i].steerAngle = guia * 30f;           //Permite o carro virar
             guiar[i].motorTorque = 0.1f;                //N�o perminte o carro parar
         }
 

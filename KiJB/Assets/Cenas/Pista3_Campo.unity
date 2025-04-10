@@ -8563,7 +8563,7 @@ Transform:
   m_GameObject: {fileID: 805430376}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -40.70921, y: 5.8282967, z: 0.49367523}
+  m_LocalPosition: {x: -40.70921, y: 3.904276, z: 0.49367523}
   m_LocalScale: {x: 150.00002, y: 149.99997, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8881,7 +8881,7 @@ Transform:
   m_GameObject: {fileID: 848405601}
   serializedVersion: 2
   m_LocalRotation: {x: 0.14219925, y: 0.6989317, z: 0.6868383, w: 0.13973887}
-  m_LocalPosition: {x: -44.098125, y: 0.27618694, z: -102.759285}
+  m_LocalPosition: {x: -44.394463, y: -0.28435755, z: -102.759285}
   m_LocalScale: {x: 11.499999, y: 2.02, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13968,6 +13968,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 8f283bbbbf51f5749b9dc7997b08c598, type: 2}
+    - target: {fileID: -969220493396545080, guid: 33c1e9318d0692c43969cdd7bfe67066, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 80841845ebfe8e3448e14b23fc57d624, type: 2}
     - target: {fileID: -398464808521225281, guid: 33c1e9318d0692c43969cdd7bfe67066, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -18123,7 +18127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344e1bda4cfb64140ac42ef0b0131c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anguloMaximo: 40
+  anguloMaximo: 30
   velocidadeRotacao: 5
 --- !u!64 &1578015103
 MeshCollider:
@@ -19314,7 +19318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344e1bda4cfb64140ac42ef0b0131c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anguloMaximo: 40
+  anguloMaximo: 30
   velocidadeRotacao: 5
 --- !u!1 &1664502175
 GameObject:
