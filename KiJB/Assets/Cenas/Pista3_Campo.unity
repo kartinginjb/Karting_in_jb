@@ -18127,7 +18127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344e1bda4cfb64140ac42ef0b0131c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anguloMaximo: 30
+  anguloMaximo: 40
   velocidadeRotacao: 5
 --- !u!64 &1578015103
 MeshCollider:
@@ -19318,7 +19318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344e1bda4cfb64140ac42ef0b0131c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anguloMaximo: 30
+  anguloMaximo: 40
   velocidadeRotacao: 5
 --- !u!1 &1664502175
 GameObject:
