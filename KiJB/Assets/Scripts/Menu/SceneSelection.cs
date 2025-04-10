@@ -10,7 +10,7 @@ public class SceneSelectScript : MonoBehaviour
     {
         switch (this.gameObject.name)
         {
-            case "Kart_sel":
+            case "Play":
                 SceneManager.LoadScene("Karts");
                 break;
             case "open_world":
