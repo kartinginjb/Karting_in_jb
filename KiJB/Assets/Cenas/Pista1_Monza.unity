@@ -6232,10 +6232,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 5999035c98b40d646b2b09f90549f5e5, type: 2}
+    - target: {fileID: -398464808521225281, guid: c1e38194f8774764c9c9c72d09d5f790, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f283bbbbf51f5749b9dc7997b08c598, type: 2}
     - target: {fileID: 919132149155446097, guid: c1e38194f8774764c9c9c72d09d5f790, type: 3}
       propertyPath: m_Name
       value: Circuito_MONZA
       objectReference: {fileID: 0}
+    - target: {fileID: 2927593092117553206, guid: c1e38194f8774764c9c9c72d09d5f790, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a5138e641ae0e304984dbb9d1a9fe655, type: 2}
     - target: {fileID: 7099143592633141836, guid: c1e38194f8774764c9c9c72d09d5f790, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
