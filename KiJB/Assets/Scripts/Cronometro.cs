@@ -32,7 +32,6 @@ public class Cronometro : MonoBehaviour
     {
         tempo = 0f;
         aContar = true;
-        UnityEngine.Debug.Log("Cronómetro começou!");
     }
 
     public void PararCronometro()

@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 
 public class Meta : MonoBehaviour
@@ -14,6 +15,10 @@ public class Meta : MonoBehaviour
     {
         carro x = other.transform.root.GetComponent<carro>();   //procura no objeto principal pelo script carro
 
+        cronometro.PararCronometro();
+        UnityEngine.Debug.Log("Tempo final: " + cronometro.ObterTempoFinal().ToString("F2"));
+        cronometro.ComecarCronometro();
+
         foreach (Checkpoint ch in checkpoints)
         {
             if (!ch.PassouCarro())
@@ -27,9 +32,6 @@ public class Meta : MonoBehaviour
         x.SomarVolta();
         ResetCheckpoints();
 
-        cronometro.PararCronometro();
-        Debug.Log("Tempo final: " + cronometro.ObterTempoFinal().ToString("F2"));
-        cronometro.ComecarCronometro();
     }
 
     void ResetCheckpoints()
