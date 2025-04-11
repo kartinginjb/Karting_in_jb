@@ -12,7 +12,20 @@ public class HUDController : MonoBehaviour
     void Update()
     {
         textRPM.text = Mathf.RoundToInt(carro.rpm).ToString() + " RPM";
-        textMudanca.text =(carro.mudancaAtual + 1).ToString();
         textVelocidade.text = Mathf.RoundToInt(carro.veloKMH).ToString() + " KM/H";
+
+        if (Input.GetAxis("Vertical") == 0)
+        {
+            textMudanca.text = "N";
+        }
+            if (Input.GetAxis("Vertical") == 1)
+            {
+                textMudanca.text = "1";
+            } 
+                if (Input.GetAxis("Vertical") == -1)
+                {
+                    textMudanca.text = "R";
+                }
     }
 }
+   

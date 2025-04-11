@@ -41,7 +41,7 @@ public class carro : MonoBehaviour
     void Update()
     {
             guia = Input.GetAxis("Horizontal");  //Recebe o valor horizontal 
-            acc = Input.GetAxis("Vertical");    //Recebe o valor horizontal
+            acc = Input.GetAxis("Vertical");    //Recebe o valor vertical
     }
 
     public void SomarVolta()

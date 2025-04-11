@@ -9,19 +9,24 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Chao_fora
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: 2100000, guid: 8f283bbbbf51f5749b9dc7997b08c598, type: 2}
+  m_Parent: {fileID: 2100000, guid: 25b9e884652d25e4490c43d556cd616c, type: 2}
   m_ModifiedSerializedProperties: 24
   m_ValidKeywords:
+  - _ALPHAPREMULTIPLY_ON
+  - _ALPHATEST_ON
   - _SPECULAR_SETUP
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap:
-    RenderType: Opaque
+    RenderType: Transparent
   disabledShaderPasses:
   - MOTIONVECTORS
+  - DepthOnly
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
