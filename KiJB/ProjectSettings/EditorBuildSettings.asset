@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Cenas/Play.unity
+    guid: 512075f5dba455f49a77ade36e1a58cd
   - enabled: 1
     path: Assets/Cenas/Menu.unity
     guid: e6dd869b38082d94884872a7575b5721
@@ -26,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cenas/Pista3_Campo.unity
     guid: feeb5f1f6f471684b9af0949f4f03fda
+  - enabled: 1
+    path: Assets/Cenas/Pista4_Basica.unity
+    guid: 219d81f2116c689489a91adb624a0204
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

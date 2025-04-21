@@ -448,8 +448,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 339316109}
-        m_TargetAssemblyTypeName: BackButtonScript, Assembly-CSharp
-        m_MethodName: backToMainMenu
+        m_TargetAssemblyTypeName: SceneSelectScript, Assembly-CSharp
+        m_MethodName: selectScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 339316104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cabae7bf725740d4ab00709c4f1608d9, type: 3}
+  m_Script: {fileID: 11500000, guid: f1eea494fe1b6994b8c9638d8ee1c56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &364451213
