@@ -1,16 +1,19 @@
 using UnityEngine;
 using TMPro;
+using System;
 
 public class HUDController : MonoBehaviour
 {
     public TextMeshProUGUI textRPM;
     public TextMeshProUGUI textMudanca;
     public TextMeshProUGUI textVelocidade;
+    public TextMeshProUGUI textVoltas;
 
     public carro carro; // Referência ao script do carro
 
     void Update()
     {
+        textVoltas.text = Mathf.RoundToInt(carro.voltas).ToString() + " Voltas";
         textRPM.text = Mathf.RoundToInt(carro.rpm).ToString() + " RPM";             //recebe o valor das RPM do script carro
         textVelocidade.text = Mathf.RoundToInt(carro.veloKMH).ToString() + " KM/H"; //recebe o valor da velocidade do script carro
             
