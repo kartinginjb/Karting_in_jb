@@ -7,8 +7,8 @@ public class carro : MonoBehaviour
 {
     public WheelCollider[] guiar;
 
-    float guia=0f;   //Variavel para receber o valor horizontal
-    float acc=0f;   //Variavel para receber o valor vertial
+    float guia = 0f;   //Variavel para receber o valor horizontal
+    float acc = 0f;   //Variavel para receber o valor vertial
 
     Rigidbody rb;   //Variavel para reconehcer o rigidboddy
 
@@ -34,14 +34,15 @@ public class carro : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody>(); 
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-            guia = Input.GetAxis("Horizontal");  //Recebe o valor horizontal 
-            acc = Input.GetAxis("Vertical");    //Recebe o valor vertical
+
+        guia = Input.GetAxis("Horizontal");  //Recebe o valor horizontal 
+        acc = Input.GetAxis("Vertical");    //Recebe o valor vertical
     }
 
     public void SomarVolta()
