@@ -5,6 +5,7 @@ public class Meta : MonoBehaviour
 {
     public Cronometro cronometro;
     Checkpoint[] checkpoints;
+
     private void Awake()
     {
         //Carregar checkpoints

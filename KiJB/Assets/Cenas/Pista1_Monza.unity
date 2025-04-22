@@ -8958,7 +8958,7 @@ GameObject:
   - component: {fileID: 645911164}
   - component: {fileID: 645911167}
   - component: {fileID: 645911166}
-  - component: {fileID: 645911165}
+  - component: {fileID: 645911168}
   m_Layer: 0
   m_Name: ponto
   m_TagString: Untagged
@@ -8981,19 +8981,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1826463669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &645911165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645911163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da206d468b5913e49a6f963e77d9fe61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carros: {fileID: 0}
 --- !u!65 &645911166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9023,6 +9010,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645911163}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &645911168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645911163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f158668686dd042834beefabdf4b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carros: {fileID: 0}
 --- !u!1 &646675654
 GameObject:
   m_ObjectHideFlags: 0
@@ -22871,7 +22871,9 @@ MonoBehaviour:
   guiar:
   - {fileID: 904547853}
   - {fileID: 662680686}
-  maxTorque: 1500
+  - {fileID: 1324742400}
+  - {fileID: 1869370201}
+  maxTorque: 3500
   forcaTravagem: 1200
   veloKMH: 0
   rpm: 0
@@ -22924,7 +22926,7 @@ Rigidbody:
   m_GameObject: {fileID: 1953847817}
   serializedVersion: 4
   m_Mass: 100
-  m_Drag: 0.5
+  m_Drag: 0.1
   m_AngularDrag: 3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
