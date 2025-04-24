@@ -9,7 +9,7 @@ public class Meta : MonoBehaviour
     private void Awake()
     {
         //Carregar checkpoints
-        checkpoints = FindObjectsOfType<Checkpoint>();
+        checkpoints = FindObjectsByType<Checkpoint>(FindObjectsSortMode.None);
     }
 
     private void OnTriggerEnter(Collider other)         

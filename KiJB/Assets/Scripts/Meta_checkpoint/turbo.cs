@@ -3,44 +3,43 @@ using UnityEngine;
 
 public class turbo : MonoBehaviour
 {
-    DRSsys[] drs;
-    DRSsys[] carros;
-    carro carro;
+    private DRSsys[] zonasDRS;
+    public bool podeUsarDRS = false;
 
     private void Awake()
     {
-        //Carregar checkpoints
-        drs = FindObjectsOfType<DRSsys>();
+        zonasDRS = FindObjectsByType<DRSsys>(FindObjectsSortMode.None);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        carro x = other.transform.root.GetComponent<carro>();   //procura no objeto principal pelo script carro
+        carro carroObj = other.transform.root.GetComponent<carro>();
 
-        foreach(DRSsys ponto in drs)
+        if (carroObj == null)
+            return;
+
+        GameObject objCarro = other.transform.root.gameObject;
+
+        foreach (DRSsys ponto in zonasDRS)
         {
-            if (ponto.PassouCarro())
+            if (ponto.PassouCarro(objCarro))
             {
-                if (Input.GetKeyDown(KeyCode.LeftShift))
-                {
-                    carro.maxTorque = 4000;
-                }
-                else if (Input.GetKeyUp(KeyCode.LeftShift))
-                {
-                    carro.maxTorque = 3500;
-                }
+                podeUsarDRS = false;
             }
         }
-
-        Resetdrs();
-
     }
 
-    void Resetdrs()
+    private void OnTriggerExit(Collider other)
     {
-        foreach (DRSsys cha in drs)
+        carro carroObj = other.transform.root.GetComponent<carro>();
+        if (carroObj != null)
         {
-            cha.carros = null;
+            carroObj.maxTorque = 3500;
+        }
+
+        foreach (DRSsys ponto in zonasDRS)
+        {
+            ponto.Resetar();
         }
     }
 }

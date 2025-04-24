@@ -31,6 +31,8 @@ public class carro : MonoBehaviour
 
     float steerAtual = 0f;
 
+    public turbo drs;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -49,6 +51,20 @@ public class carro : MonoBehaviour
     {
         guia = Input.GetAxis("Horizontal");
         acc = Input.GetAxis("Vertical");
+
+        if(drs.podeUsarDRS != false)
+        {
+            UnityEngine.Debug.Log("DRS Ativado");
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                maxTorque = 4000;
+            }
+            else
+            {
+                maxTorque = 3500;
+            }
+        }
     }
 
     public void SomarVolta()

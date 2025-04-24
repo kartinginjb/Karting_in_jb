@@ -9022,7 +9022,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73f158668686dd042834beefabdf4b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carros: {fileID: 0}
+  carroAutorizado: {fileID: 0}
+  drs: {fileID: 1694378146}
 --- !u!1 &646675654
 GameObject:
   m_ObjectHideFlags: 0
@@ -19780,6 +19781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971bac5012e7d77449cd3d2e94d5bbca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  podeUsarDRS: 0
 --- !u!65 &1694378147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22889,6 +22891,7 @@ MonoBehaviour:
   forcaFinal: {x: 0, y: 0, z: 0}
   podeAcelerar: 0
   voltas: 0
+  drs: {fileID: 1694378146}
 --- !u!4 &1953847819
 Transform:
   m_ObjectHideFlags: 0

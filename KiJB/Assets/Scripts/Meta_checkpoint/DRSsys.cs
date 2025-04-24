@@ -2,22 +2,27 @@ using UnityEngine;
 
 public class DRSsys : MonoBehaviour
 {
-    public GameObject carros = null;
+    public GameObject carroAutorizado = null;
+
+    public turbo drs;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.root.GetComponent<carro>())
         {
-            carros = other.transform.root.gameObject;  //procura no objeto principal pelo script carro
+            carroAutorizado = other.transform.root.gameObject;
+
+            drs.podeUsarDRS = true;
         }
     }
 
-    public bool PassouCarro()   //confirma se o carro passou na meta
+    public bool PassouCarro(GameObject carro)
     {
-        if (carros != null)
-        {
-            return true;
-        }
-        return false;
+        return carroAutorizado == carro;
+    }
+
+    public void Resetar()
+    {
+        carroAutorizado = null;
     }
 }
