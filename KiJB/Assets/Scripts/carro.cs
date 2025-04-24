@@ -54,8 +54,6 @@ public class carro : MonoBehaviour
 
         if(drs.podeUsarDRS != false)
         {
-            UnityEngine.Debug.Log("DRS Ativado");
-
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 maxTorque = 4000;
