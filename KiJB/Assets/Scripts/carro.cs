@@ -36,7 +36,7 @@ public class carro : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.centerOfMass = new Vector3(0f, -1.2f, 0f); // 🔽 baixar bem o centro de massa
+        rb.centerOfMass = new Vector3(0f, -1f, 0f); // 🔽 baixar bem o centro de massa
 
         for (int i = 0; i < guiar.Length; i++)
         {
