@@ -2850,7 +2850,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3846018093981099296, guid: 300f737daa402f940acd2561787383df, type: 3}
+  - {fileID: 2100000, guid: fbc24106767cd924ba6695a397b17bd4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14758,7 +14758,7 @@ MonoBehaviour:
   red2: {fileID: 609669334}
   red3: {fileID: 199939817}
   green: {fileID: 1207951098}
-  carro: {fileID: 0}
+  carro: {fileID: 2018266824}
 --- !u!1 &846503144
 GameObject:
   m_ObjectHideFlags: 0
@@ -20450,7 +20450,7 @@ MonoBehaviour:
   textMudanca: {fileID: 1722423164}
   textVelocidade: {fileID: 1817730031}
   textVoltas: {fileID: 312286606}
-  carro: {fileID: 0}
+  carro: {fileID: 2018266824}
 --- !u!114 &1167078945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24622,7 +24622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carroAutorizado: {fileID: 0}
-  drs: {fileID: 0}
+  drs: {fileID: 126436147}
 --- !u!65 &1397313816
 BoxCollider:
   m_ObjectHideFlags: 0
