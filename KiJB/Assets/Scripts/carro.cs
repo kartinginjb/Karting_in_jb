@@ -56,7 +56,7 @@ public class carro : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                maxTorque = 4000;
+                maxTorque = 6000;
             }
             else
             {
@@ -92,7 +92,7 @@ public class carro : MonoBehaviour
         }
         else if (Mathf.Abs(input) < 0.05f && veloKMH > 5f)
         {
-            travagem = forcaTravagem * 0.3f;
+            travagem = forcaTravagem * 0.6f;
         }
 
         guiar[2].brakeTorque = travagem;
