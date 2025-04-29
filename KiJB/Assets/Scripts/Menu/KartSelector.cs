@@ -50,9 +50,4 @@ public class KartSelector : MonoBehaviour
             karts[i].SetActive(i == kartSelecionado);
         }
     }
-
-    public void IrParaCena(string nomeDaCena)
-    {
-        SceneManager.LoadScene(nomeDaCena);
-    }
 }
