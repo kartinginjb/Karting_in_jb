@@ -14,7 +14,7 @@ public class carro : MonoBehaviour
     public float forcaTravagem = 400f;
 
     public float veloKMH;
-    public float rpm;
+    public float rpm ;
 
     public float[] raioMudancas;
     public int mudancaAtual = 0;
@@ -33,10 +33,15 @@ public class carro : MonoBehaviour
 
     public turbo drs;
 
+    public AudioClip somCarro;          //som do carro
+    public AudioSource audioCarro;      //componente de audio
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = new Vector3(0f, -1f, 0f); // 🔽 baixar bem o centro de massa
+
+        audioCarro.clip = somCarro;
 
         for (int i = 0; i < guiar.Length; i++)
         {
@@ -130,6 +135,9 @@ public class carro : MonoBehaviour
         // Aplica barra estabilizadora nos dois eixos
         AplicarAntiRoll(guiar[0], guiar[1], 10000f); // frente
         AplicarAntiRoll(guiar[2], guiar[3], 8000f);  // trás
+
+        // Audio do carro
+        audioCarro.pitch = 0.6f + veloKMH / 50f;
 
     }
 
