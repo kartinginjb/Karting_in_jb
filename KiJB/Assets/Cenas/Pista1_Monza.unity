@@ -37082,7 +37082,7 @@ GameObject:
   - component: {fileID: 3403365991680044593}
   - component: {fileID: 9106284273160110664}
   m_Layer: 0
-  m_Name: Volante
+  m_Name: steer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58317,8 +58317,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4178413679836344792}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.30070576, y: 0, z: 0, w: 0.953717}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.30070576, y: -0, z: -0, w: 0.953717}
+  m_LocalPosition: {x: -0.001498618, y: 0.01883413, z: 0.02648782}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -62494,7 +62494,7 @@ Transform:
   m_GameObject: {fileID: 8821623531096410907}
   serializedVersion: 2
   m_LocalRotation: {x: 0.30070576, y: 0, z: 0, w: 0.953717}
-  m_LocalPosition: {x: -0.0013, y: 0.4782, z: 0.1072}
+  m_LocalPosition: {x: 0.0004, y: 0.4782, z: 0.0745}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
