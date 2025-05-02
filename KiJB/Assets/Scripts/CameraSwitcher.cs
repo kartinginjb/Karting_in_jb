@@ -30,7 +30,7 @@ public class CameraSwitcher : MonoBehaviour
             camera2.enabled = true;
             activeCamera = camera2;
         }
-        else
+        else 
         {
             camera2.enabled = false;
             camera1.enabled = true;
