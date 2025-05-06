@@ -7995,7 +7995,7 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs: {fileID: 126436147}
 --- !u!64 &238798428
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13304,7 +13304,7 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs: {fileID: 126436147}
 --- !u!1 &435655065
 GameObject:
   m_ObjectHideFlags: 0
@@ -19001,7 +19001,7 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs: {fileID: 126436147}
 --- !u!1 &635131839
 GameObject:
   m_ObjectHideFlags: 0
@@ -34927,7 +34927,7 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs: {fileID: 126436147}
 --- !u!64 &1183144481
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -38503,7 +38503,7 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs: {fileID: 126436147}
 --- !u!1 &1324844173
 GameObject:
   m_ObjectHideFlags: 0
@@ -39095,7 +39095,7 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs: {fileID: 126436147}
 --- !u!1 &1348749480
 GameObject:
   m_ObjectHideFlags: 0
@@ -43322,7 +43322,7 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs: {fileID: 126436147}
 --- !u!1 &1409838540
 GameObject:
   m_ObjectHideFlags: 0
@@ -44911,7 +44911,7 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs: {fileID: 126436147}
 --- !u!1 &1456511711
 GameObject:
   m_ObjectHideFlags: 0
@@ -50404,7 +50404,7 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs: {fileID: 126436147}
 --- !u!1 &1656626592
 GameObject:
   m_ObjectHideFlags: 0
@@ -51185,7 +51185,7 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs: {fileID: 126436147}
 --- !u!1 &1697344424
 GameObject:
   m_ObjectHideFlags: 0
@@ -53673,7 +53673,7 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs: {fileID: 126436147}
 --- !u!1 &1791828088
 GameObject:
   m_ObjectHideFlags: 0
@@ -58777,7 +58777,7 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs: {fileID: 126436147}
 --- !u!1 &1944059162
 GameObject:
   m_ObjectHideFlags: 0
@@ -63312,7 +63312,7 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs: {fileID: 126436147}
 --- !u!1 &2108253624
 GameObject:
   m_ObjectHideFlags: 0
@@ -64050,7 +64050,7 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs: {fileID: 126436147}
 --- !u!1 &2131738560
 GameObject:
   m_ObjectHideFlags: 0
