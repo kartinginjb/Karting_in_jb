@@ -13373,7 +13373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 7cd686ea184e13747850bb191ec31065, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -18575,7 +18575,7 @@ MonoBehaviour:
   red2: {fileID: 1298429800}
   red3: {fileID: 1156774743}
   green: {fileID: 1847782381}
-  carro: {fileID: 0}
+  carro: {fileID: 1953847818}
 --- !u!1 &1033237712
 GameObject:
   m_ObjectHideFlags: 0
@@ -27472,7 +27472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee3fe3e29c3f31f4f95ae888beaa1631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cronometro: {fileID: 0}
+  cronometro: {fileID: 427665971}
 --- !u!1 &1646626901
 GameObject:
   m_ObjectHideFlags: 0
@@ -27530,7 +27530,7 @@ MonoBehaviour:
   textMudanca: {fileID: 1218119850}
   textVelocidade: {fileID: 479415844}
   textVoltas: {fileID: 1435283392}
-  carro: {fileID: 0}
+  carro: {fileID: 1953847818}
 --- !u!114 &1646626904
 MonoBehaviour:
   m_ObjectHideFlags: 0
