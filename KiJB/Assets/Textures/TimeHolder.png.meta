@@ -1,12 +1,20 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: bd7d022237381354aa7f6eb2cd1dd28f
+=======
+guid: 99d3267287af94f4fb295617e62d0c78
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
+<<<<<<< Updated upstream
     enableMipMap: 0
+=======
+    enableMipMap: 1
+>>>>>>> Stashed changes
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,6 +45,7 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
+<<<<<<< Updated upstream
     wrapU: 1
     wrapV: 1
     wrapW: 0
@@ -44,6 +53,15 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
+=======
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 1
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+>>>>>>> Stashed changes
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +70,15 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
+<<<<<<< Updated upstream
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
+=======
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+>>>>>>> Stashed changes
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -100,7 +124,11 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
+<<<<<<< Updated upstream
     spriteID: 5e97eb03825dee720800000000000000
+=======
+    spriteID: 
+>>>>>>> Stashed changes
     internalID: 0
     vertices: []
     indices: 
