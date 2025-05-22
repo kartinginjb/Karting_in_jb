@@ -1,51 +1,61 @@
 using UnityEngine;
 using UnityEngine.UI;
-using static System.Net.Mime.MediaTypeNames;
 using TMPro;
-using System.Diagnostics;
 
 public class Cronometro : MonoBehaviour
 {
-    public TextMeshProUGUI textoCronometro;
-    private float tempo = 0f;       // Variável que guarda o tempo total que passou
-    private bool aContar = false;   // Controla se o cronómetro está a contar ou não
+    public TextMeshProUGUI textoCronometro;      // Texto do cronÃ´metro em tempo real
+    public TextMeshProUGUI textoUltimaVolta;     // Texto da Ãºltima volta (novo)
+
+    private float tempo = 0f;                    // Tempo total atual
+    private bool aContar = false;                // Se o cronÃ´metro estÃ¡ ativo
 
     void Update()
     {
-        // Se o cronómetro estiver ativo, soma o tempo passado
         if (aContar)
         {
-            tempo += Time.deltaTime;  // Soma o tempo desde o último frame
-            AtualizarTexto();         // Atualiza o texto no ecrã
+            tempo += Time.deltaTime;
+            AtualizarTexto();  // Atualiza o cronÃ´metro em tempo real
         }
     }
 
-    // Atualiza o texto do cronómetro no formato MM:SS:MMM
+    // Atualiza o texto do cronÃ´metro (tempo atual)
     void AtualizarTexto()
     {
-        // Converte o tempo total para minutos, segundos e milissegundos
         int minutos = Mathf.FloorToInt(tempo / 60F);
         int segundos = Mathf.FloorToInt(tempo % 60F);
         int milissegundos = Mathf.FloorToInt((tempo * 1000) % 1000);
 
-        // Formata o texto com dois dígitos para minutos/segundos e três para milissegundos
         textoCronometro.text = string.Format("{0:00}:{1:00}:{2:000}", minutos, segundos, milissegundos);
     }
 
-    // Inicia o cronómetro e reinicia o tempo
+    // Atualiza o texto da Ãºltima volta usando o tempo final
+    void MostrarUltimaVolta()
+    {
+        float tempoFinal = ObterTempoFinal();
+
+        int minutos = Mathf.FloorToInt(tempoFinal / 60F);
+        int segundos = Mathf.FloorToInt(tempoFinal % 60F);
+        int milissegundos = Mathf.FloorToInt((tempoFinal * 1000) % 1000);
+
+        textoUltimaVolta.text = "Ultima Volta: " + string.Format("{0:00}:{1:00}:{2:000}", minutos, segundos, milissegundos);
+    }
+
+    // Inicia o cronÃ´metro e zera o tempo
     public void ComecarCronometro()
     {
         tempo = 0f;
         aContar = true;
     }
 
-    // Para o cronómetro sem apagar o tempo
+    // Para o cronÃ´metro e mostra o tempo da Ãºltima volta
     public void PararCronometro()
     {
         aContar = false;
+        MostrarUltimaVolta(); // Exibe o tempo da volta
     }
 
-    // Retorna o tempo final (em segundos, como float)
+    // Retorna o tempo final (em segundos)
     public float ObterTempoFinal()
     {
         return tempo;
