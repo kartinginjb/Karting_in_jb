@@ -1,8 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:KiJB/Assets/Models/Materials/CircuitoJedonaco-1Lacypla_Petiole.001.mat.meta
 guid: e60263aed29bdb946ad06480404f341a
 NativeFormatImporter:
+========
+guid: debc58e0ea04d4b489328dbddc60356a
+folderAsset: yes
+DefaultImporter:
+>>>>>>>> Stashed changes:KiJB/Assets/Textures/Minimapas - Menu.meta
   externalObjects: {}
-  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

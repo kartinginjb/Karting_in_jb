@@ -1,11 +1,22 @@
 fileFormatVersion: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 guid: f90ae2f9e4dd3ad42b3a195d83817f0c
 =======
 guid: d544adb83f1600948afa6cef3d353127
 >>>>>>> Stashed changes
 folderAsset: yes
 DefaultImporter:
+=======
+<<<<<<<< Updated upstream:KiJB/Assets/Models/Materials/CircuitoJedonaco-10120_LCD_Computer_Monitor_v01.001.mat.meta
+guid: 9ddc2e7401783c54896b596dd58068da
+NativeFormatImporter:
+========
+guid: d544adb83f1600948afa6cef3d353127
+folderAsset: yes
+DefaultImporter:
+>>>>>>>> Stashed changes:KiJB/Assets/Textures/Minimapas - Corrida e TT.meta
+>>>>>>> Stashed changes
   externalObjects: {}
   userData: 
   assetBundleName: 
