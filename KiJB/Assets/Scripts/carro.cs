@@ -140,7 +140,7 @@ public class carro : MonoBehaviour
         audioCarro.pitch = 0.6f + veloKMH / 50f;
 
     }
-
+        
     void AjustarFriccao(WheelCollider roda, bool traseira)
     {
         WheelFrictionCurve fric = roda.sidewaysFriction;
