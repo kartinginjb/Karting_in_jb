@@ -2379,14 +2379,14 @@ RectTransform:
   m_GameObject: {fileID: 66669165}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.10000156, y: 0.24000004, z: 1}
+  m_LocalScale: {x: 0.10000155, y: 0.60000116, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 669272389}
+  m_Father: {fileID: 960982120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14.7, y: 10.6}
+  m_AnchoredPosition: {x: 82.45252, y: 195.68915}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &66669167
@@ -21475,7 +21475,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1854397660}
-  - {fileID: 66669166}
   m_Father: {fileID: 203492653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -32055,6 +32054,7 @@ RectTransform:
   - {fileID: 82976004}
   - {fileID: 786232289}
   - {fileID: 1004970335}
+  - {fileID: 66669166}
   m_Father: {fileID: 203492653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -32077,7 +32077,7 @@ MonoBehaviour:
   textRPM: {fileID: 82976005}
   textMudanca: {fileID: 786232290}
   textVelocidade: {fileID: 1004970336}
-  textVoltas: {fileID: 0}
+  textVoltas: {fileID: 66669167}
   carro: {fileID: 866865214}
 --- !u!114 &960982122
 MonoBehaviour:
