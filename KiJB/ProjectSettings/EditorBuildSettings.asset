@@ -36,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Cenas/Pista5_DiasSpeed.unity
     guid: 59650d4ff561f564e98319059d75ceb8
   - enabled: 1
-    path: Assets/Cenas/Pista6-Jedonaco.unity
+    path: Assets/Cenas/Pista6_Jedonaco.unity
     guid: 2b6ae7bcd57bf4b4ba1bcd7b95cbc7e9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
