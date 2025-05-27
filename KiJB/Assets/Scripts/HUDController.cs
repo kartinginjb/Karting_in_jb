@@ -9,7 +9,7 @@ public class HUDController : MonoBehaviour
     public TextMeshProUGUI textVelocidade;
     public TextMeshProUGUI textVoltas;
 
-    public carro carro; // Referência ao script do carro
+    public carro carro; // Referï¿½ncia ao script do carro
 
     void Update()
     {
@@ -17,7 +17,7 @@ public class HUDController : MonoBehaviour
         textRPM.text = Mathf.RoundToInt(carro.rpm).ToString() + " RPM";             //recebe o valor das RPM do script carro
         textVelocidade.text = Mathf.RoundToInt(carro.veloKMH).ToString() + " KM/H"; //recebe o valor da velocidade do script carro
             
-            //verifica se o jogador está a acelerar para a frente // trás 
+            //verifica se o jogador estï¿½ a acelerar para a frente // trï¿½s 
         if (Input.GetAxis("Vertical") == 0)
         {
             textMudanca.text = "N";
