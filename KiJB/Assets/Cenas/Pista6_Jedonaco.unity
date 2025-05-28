@@ -5913,7 +5913,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &158632202
 GameObject:
   m_ObjectHideFlags: 0
@@ -7558,7 +7559,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &216090287 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7119424601379798746, guid: f25bc5271c4c4ef42abc93fecfdf3c56, type: 3}
@@ -8007,8 +8009,8 @@ Transform:
   m_GameObject: {fileID: 230173674}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.8444061, y: 4.160652, z: 149.8442}
-  m_LocalScale: {x: 1, y: 8.43, z: 27.73}
+  m_LocalPosition: {x: 61.71, y: 3.95, z: 83.33}
+  m_LocalScale: {x: 1, y: 8.43, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2009285184}
@@ -8609,6 +8611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textoCronometro: {fileID: 7107581}
   textoUltimaVolta: {fileID: 1476696496}
+  textoMelhorVolta: {fileID: 0}
 --- !u!1 &253837396
 GameObject:
   m_ObjectHideFlags: 0
@@ -11241,7 +11244,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &342026851
 GameObject:
   m_ObjectHideFlags: 0
@@ -15208,7 +15212,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &454636537
 GameObject:
   m_ObjectHideFlags: 0
@@ -16621,7 +16626,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &501443095
 GameObject:
   m_ObjectHideFlags: 0
@@ -17258,7 +17264,7 @@ Transform:
   m_GameObject: {fileID: 517510947}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 67.76, y: 2.51, z: 64.71}
+  m_LocalPosition: {x: 67.76, y: 2.51, z: 10.2}
   m_LocalScale: {x: 10.121235, y: 5.6640596, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23261,8 +23267,8 @@ Transform:
   m_GameObject: {fileID: 712176510}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 121.34111, y: 4.160652, z: 149.8442}
-  m_LocalScale: {x: 1, y: 8.43, z: 27.73}
+  m_LocalPosition: {x: -1.73, y: 3.75, z: 84.42}
+  m_LocalScale: {x: 1, y: 8.43, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2009285184}
@@ -23455,7 +23461,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &716489644
 GameObject:
   m_ObjectHideFlags: 0
@@ -28471,7 +28478,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &871497773
 GameObject:
   m_ObjectHideFlags: 0
@@ -30429,7 +30437,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &922339816
 GameObject:
   m_ObjectHideFlags: 0
@@ -31380,7 +31389,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &960115754
 GameObject:
   m_ObjectHideFlags: 0
@@ -34244,7 +34254,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &1028376260
 GameObject:
   m_ObjectHideFlags: 0
@@ -34922,7 +34933,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &1046572661
 GameObject:
   m_ObjectHideFlags: 0
@@ -36420,7 +36432,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &1095815693
 GameObject:
   m_ObjectHideFlags: 0
@@ -42132,7 +42145,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &1254780803
 GameObject:
   m_ObjectHideFlags: 0
@@ -42961,7 +42975,8 @@ MonoBehaviour:
   forcaFinal: {x: 0, y: 0, z: 0}
   podeAcelerar: 0
   voltas: 0
-  drs: {fileID: 230173675}
+  drs:
+  - {fileID: 230173675}
   somCarro: {fileID: 8300000, guid: ae1853b2f9a28554f83e99b60b5e74d0, type: 3}
   audioCarro: {fileID: 1272666461}
 --- !u!82 &1272666461
@@ -43069,8 +43084,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272666459}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.7, y: 0, z: 58.31}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 66.7, y: 0, z: 26.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -43085,7 +43100,7 @@ Transform:
   - {fileID: 2002153883}
   - {fileID: 998107749}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!54 &1272666463
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -52266,7 +52281,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &1596863989
 GameObject:
   m_ObjectHideFlags: 0
@@ -52657,7 +52673,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &1610263138
 GameObject:
   m_ObjectHideFlags: 0
@@ -57164,7 +57181,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &1760108143
 GameObject:
   m_ObjectHideFlags: 0
@@ -61967,7 +61985,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &1885992038
 GameObject:
   m_ObjectHideFlags: 0
@@ -62048,7 +62067,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &1887503074
 GameObject:
   m_ObjectHideFlags: 0
@@ -64191,7 +64211,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 230173675}
 --- !u!1 &1941257467 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8628056675543685677, guid: f25bc5271c4c4ef42abc93fecfdf3c56, type: 3}

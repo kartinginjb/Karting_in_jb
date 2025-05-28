@@ -1084,7 +1084,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &32489876
 GameObject:
   m_ObjectHideFlags: 0
@@ -4738,7 +4739,7 @@ GameObject:
   - component: {fileID: 126436148}
   - component: {fileID: 126436147}
   m_Layer: 0
-  m_Name: fim2
+  m_Name: Fim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8132,7 +8133,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &211923340
 GameObject:
   m_ObjectHideFlags: 0
@@ -9576,7 +9578,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &260626620
 GameObject:
   m_ObjectHideFlags: 0
@@ -18553,6 +18556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textoCronometro: {fileID: 1587432970}
   textoUltimaVolta: {fileID: 669528624}
+  textoMelhorVolta: {fileID: 0}
 --- !u!1 &550617841
 GameObject:
   m_ObjectHideFlags: 0
@@ -19877,7 +19881,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &600041712
 GameObject:
   m_ObjectHideFlags: 0
@@ -21146,7 +21151,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &644914457
 GameObject:
   m_ObjectHideFlags: 0
@@ -23244,7 +23250,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!64 &721678963
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -23919,7 +23926,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &740903491
 GameObject:
   m_ObjectHideFlags: 0
@@ -26253,7 +26261,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &810243852
 GameObject:
   m_ObjectHideFlags: 0
@@ -30289,7 +30298,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &934063641
 GameObject:
   m_ObjectHideFlags: 0
@@ -31189,7 +31199,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &957359875
 GameObject:
   m_ObjectHideFlags: 0
@@ -36588,7 +36599,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &1112503902
 GameObject:
   m_ObjectHideFlags: 0
@@ -41887,7 +41899,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &1288514729
 GameObject:
   m_ObjectHideFlags: 0
@@ -42961,7 +42974,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &1336566417
 GameObject:
   m_ObjectHideFlags: 0
@@ -47099,7 +47113,7 @@ GameObject:
   - component: {fileID: 1397313816}
   - component: {fileID: 1397313815}
   m_Layer: 0
-  m_Name: 'ponto1 '
+  m_Name: Ponto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50056,7 +50070,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &1487071637
 GameObject:
   m_ObjectHideFlags: 0
@@ -50639,7 +50654,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &1518894344
 GameObject:
   m_ObjectHideFlags: 0
@@ -51961,7 +51977,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &1564414009
 GameObject:
   m_ObjectHideFlags: 0
@@ -52915,7 +52932,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &1584978572
 GameObject:
   m_ObjectHideFlags: 0
@@ -55081,7 +55099,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &1653201377
 GameObject:
   m_ObjectHideFlags: 0
@@ -58444,7 +58463,8 @@ MonoBehaviour:
   forcaFinal: {x: 0, y: 0, z: 0}
   podeAcelerar: 0
   voltas: 0
-  drs: {fileID: 126436147}
+  drs:
+  - {fileID: 126436147}
   somCarro: {fileID: 8300000, guid: ae1853b2f9a28554f83e99b60b5e74d0, type: 3}
   audioCarro: {fileID: 1771989902}
 --- !u!4 &1771989905
@@ -61620,7 +61640,8 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: {fileID: 0}
+  drs:
+  - {fileID: 126436147}
 --- !u!1 &1900788430
 GameObject:
   m_ObjectHideFlags: 0

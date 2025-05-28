@@ -6,20 +6,31 @@ public class DRSactivation : MonoBehaviour
     public Vector3 openRotation;          // Ângulo do DRS aberto
     public Vector3 closedRotation;        // Ângulo do DRS fechado
     public float openSpeed = 5f;          // Velocidade de animação
-    public turbo drs;                     // Referência ao script turbo
+    public turbo[] drs;                   // Agora é um array de turbos
 
     void Update()
     {
         Quaternion targetRotation;
 
-        if (drs != null && drs.podeUsarDRS && Input.GetKey(KeyCode.LeftShift))
+        bool algumPodeUsarDRS = false;
+
+        foreach (var sistemaDRS in drs)
         {
-            // DRS ativo e Shift pressionado  abre
+            if (sistemaDRS != null && sistemaDRS.podeUsarDRS)
+            {
+                algumPodeUsarDRS = true;
+                break;
+            }
+        }
+
+        if (algumPodeUsarDRS && Input.GetKey(KeyCode.LeftShift))
+        {
+            // DRS activo e Shift pressionado: abre
             targetRotation = Quaternion.Euler(openRotation);
         }
         else
         {
-            // Fora da zona DRS ou Shift não pressionado  fecha
+            // Fora da zona DRS ou Shift não pressionado: fecha
             targetRotation = Quaternion.Euler(closedRotation);
         }
 

@@ -31,7 +31,7 @@ public class carro : MonoBehaviour
 
     float steerAtual = 0f;
 
-    public turbo drs;
+    public turbo[] drs;
 
     public AudioClip somCarro;          //som do carro
     public AudioSource audioCarro;      //componente de audio
@@ -57,7 +57,18 @@ public class carro : MonoBehaviour
         guia = Input.GetAxis("Horizontal");
         acc = Input.GetAxis("Vertical");
 
-        if(drs.podeUsarDRS != false)
+        bool algumPodeUsarDRS = false;
+
+        foreach (var sistemaDRS in drs)
+        {
+            if (sistemaDRS.podeUsarDRS)
+            {
+                algumPodeUsarDRS = true;
+                break;
+            }
+        }
+
+        if (algumPodeUsarDRS)
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
