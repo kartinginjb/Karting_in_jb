@@ -6,12 +6,14 @@ public class Cronometro : MonoBehaviour
     public TextMeshProUGUI textoCronometro;      // Texto do cronômetro em tempo real
     public TextMeshProUGUI textoUltimaVolta;     // Texto da última volta
     public TextMeshProUGUI textoMelhorVolta;     // Texto do melhor tempo
-
-    private float tempo = 0f;                    // Tempo total atual
-    private float melhorTempo = Mathf.Infinity;  // Começa com valor alto
-    private float ultimaVolta = 0f;              // NOVO: Armazena a última volta
+    
+    // declaração de variáveis
+    private float tempo = 0f;
+    private float melhorTempo = Mathf.Infinity;
+    private float ultimaVolta = 0f;
     private bool aContar = false;
 
+    public float MelhorTempo => melhorTempo; // 👈 Aqui está a propriedade pública
     void Update()
     {
         if (aContar)
