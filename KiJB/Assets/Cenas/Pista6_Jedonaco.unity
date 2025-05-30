@@ -12934,33 +12934,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 628000352}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &395098194 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -4345900099175811080, guid: f25bc5271c4c4ef42abc93fecfdf3c56, type: 3}
-  m_PrefabInstance: {fileID: 1202843121}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &395098198
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395098194}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1139496519331286699, guid: f25bc5271c4c4ef42abc93fecfdf3c56, type: 3}
 --- !u!1 &395782725
 GameObject:
   m_ObjectHideFlags: 0
@@ -39719,7 +39692,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: debe5534748fb744a895859cf67075b7, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -4345900099175811080, guid: f25bc5271c4c4ef42abc93fecfdf3c56, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3286920295766565257, guid: f25bc5271c4c4ef42abc93fecfdf3c56, type: 3}
@@ -40496,9 +40470,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2971188358683588403, guid: f25bc5271c4c4ef42abc93fecfdf3c56, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1325450978}
-    - targetCorrespondingSourceObject: {fileID: -4345900099175811080, guid: f25bc5271c4c4ef42abc93fecfdf3c56, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 395098198}
     - targetCorrespondingSourceObject: {fileID: -2484425593579999298, guid: f25bc5271c4c4ef42abc93fecfdf3c56, type: 3}
       insertIndex: -1
       addedObject: {fileID: 854107067}
@@ -41877,7 +41848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: b11206301272cf74089b144b67475fb6, type: 2}
+  m_Material: {fileID: 2100000, guid: bb324149b2aaac743b87ac520f61307d, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
