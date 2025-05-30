@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Dan.Demo
 {
-    public class LeaderboardShowcaseMonza : MonoBehaviour
+    public class LeaderboardShowcaseMelga : MonoBehaviour
     {
         [Header("Gameplay:")]
         [SerializeField] private TextMeshProUGUI _playerScoreText;
@@ -63,7 +63,7 @@ namespace Dan.Demo
             _pageInput.image.color = Color.white;
             _entriesToTakeInput.image.color = Color.white;
 
-            Leaderboards.KiJBMonza.GetEntries(searchQuery, OnLeaderboardLoaded, ErrorCallback);
+            Leaderboards.KiJBMelga.GetEntries(searchQuery, OnLeaderboardLoaded, ErrorCallback);
             ToggleLoadingPanel(true);
         }
 
@@ -164,12 +164,12 @@ namespace Dan.Demo
 
         public void Submit()
         {
-            Leaderboards.KiJBMonza.UploadNewEntry(_playerUsernameInput.text, _playerScore, Callback, ErrorCallback);
+            Leaderboards.KiJBMelga.UploadNewEntry(_playerUsernameInput.text, _playerScore, Callback, ErrorCallback);
         }
 
         public void DeleteEntry()
         {
-            Leaderboards.KiJBMonza.DeleteEntry(Callback, ErrorCallback);
+            Leaderboards.KiJBMelga.DeleteEntry(Callback, ErrorCallback);
         }
 
         public void ResetPlayer()
@@ -179,7 +179,7 @@ namespace Dan.Demo
 
         public void GetPersonalEntry()
         {
-            Leaderboards.KiJBMonza.GetPersonalEntry(OnPersonalEntryLoaded, ErrorCallback);
+            Leaderboards.KiJBMelga.GetPersonalEntry(OnPersonalEntryLoaded, ErrorCallback);
         }
 
         private void OnPersonalEntryLoaded(Entry entry)

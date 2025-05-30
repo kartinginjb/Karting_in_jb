@@ -3,7 +3,7 @@ using Dan.Demo;
 public class Meta : MonoBehaviour
 {
     public Cronometro cronometro;
-    public LeaderboardShowcase leaderboardShowcase;
+    public LeaderboardShowcaseMonza leaderboardShowcase;
     private Checkpoint[] checkpoints;
 
     private void Awake()
