@@ -34040,7 +34040,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   m_Content: {fileID: 1237883061}
   m_Horizontal: 0
   m_Vertical: 1
@@ -34133,15 +34132,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
-=======
-  drsFlap: {fileID: 1803922017}
-  openRotation: {x: -35, y: 0, z: 0}
-  closedRotation: {x: 0, y: 0, z: 0}
-  openSpeed: 10
-  drs:
-  - {fileID: 1694378146}
-  - {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1 &1803935721
 GameObject:
   m_ObjectHideFlags: 0
