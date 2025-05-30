@@ -39663,6 +39663,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7670588974281431804, guid: f25bc5271c4c4ef42abc93fecfdf3c56, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f283bbbbf51f5749b9dc7997b08c598, type: 2}
+    - target: {fileID: -3137079584732767288, guid: f25bc5271c4c4ef42abc93fecfdf3c56, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5999035c98b40d646b2b09f90549f5e5, type: 2}
+    - target: {fileID: 504397413649447708, guid: f25bc5271c4c4ef42abc93fecfdf3c56, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 34957d23124af474fa40774fca916580, type: 2}
     - target: {fileID: 919132149155446097, guid: f25bc5271c4c4ef42abc93fecfdf3c56, type: 3}
       propertyPath: m_Name
       value: CircuitoJedonaco
@@ -39671,6 +39683,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 80841845ebfe8e3448e14b23fc57d624, type: 2}
+    - target: {fileID: 6635556432439182054, guid: f25bc5271c4c4ef42abc93fecfdf3c56, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f283bbbbf51f5749b9dc7997b08c598, type: 2}
+    - target: {fileID: 8942068053208467554, guid: f25bc5271c4c4ef42abc93fecfdf3c56, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: debe5534748fb744a895859cf67075b7, type: 2}
     - target: {fileID: -7918335002988649766, guid: 2452dce66ea76f14a8ac52b5c80b24bb, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

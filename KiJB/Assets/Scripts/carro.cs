@@ -39,7 +39,7 @@ public class carro : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.centerOfMass = new Vector3(0f, -1f, 0f); // 🔽 baixar bem o centro de massa
+        rb.centerOfMass = new Vector3(0f, -1.2f, 0f); // 🔽 baixar bem o centro de massa
 
         audioCarro.clip = somCarro;
 
@@ -102,14 +102,19 @@ public class carro : MonoBehaviour
 
         // Travagem sensata
         float travagem = 0f;
-        if (input < -0.1f && veloKMH > 2f && !emMarchaRe)
+        if (!emMarchaRe)
         {
-            travagem = forcaTravagem;
+            if (input < -0.1f && veloKMH > 2f)
+                travagem = forcaTravagem; // travagem activa
+            else if (Mathf.Abs(input) < 0.05f && veloKMH > 5f)
+                travagem = forcaTravagem * 0.6f; // travagem passiva ao largar
         }
-        else if (Mathf.Abs(input) < 0.05f && veloKMH > 5f)
+        else
         {
-            travagem = forcaTravagem * 0.6f;
+            if (input > 0.1f && veloKMH > 2f)
+                travagem = forcaTravagem; // travagem ao inverter sentido em marcha atrás
         }
+
 
         guiar[2].brakeTorque = travagem;
         guiar[3].brakeTorque = travagem;
@@ -141,7 +146,9 @@ public class carro : MonoBehaviour
         forcaFinal = transform.forward * torqueFinal;
 
         // Força descendente constante
-        rb.AddForce(-transform.up * veloKMH * 50f);
+        if (veloKMH > 10f)
+            rb.AddForce(-transform.up * veloKMH * 40f);
+
 
         // Aplica barra estabilizadora nos dois eixos
         AplicarAntiRoll(guiar[0], guiar[1], 10000f); // frente
