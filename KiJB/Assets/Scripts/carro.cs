@@ -11,7 +11,7 @@ public class carro : MonoBehaviour
     Rigidbody rb;
 
     public float maxTorque = 3500f;
-    public float forcaTravagem = 400f;
+    public float forcaTravagem = 1400f;
 
     public float veloKMH;
     public float rpm ;
@@ -20,7 +20,7 @@ public class carro : MonoBehaviour
     public int mudancaAtual = 0;
 
     public float minRPM = 1000f;
-    public float maxRPM = 7000f;
+    public float maxRPM = 11000f;
 
     public Vector3 forcaFinal;
 
@@ -73,10 +73,12 @@ public class carro : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 maxTorque = 6000;
+                rb.linearDamping = 0.05f;
             }
             else
             {
                 maxTorque = 3500;
+                rb.linearDamping = 0.1f;
             }
         }
     }

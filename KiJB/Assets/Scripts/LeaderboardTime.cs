@@ -18,7 +18,7 @@ namespace LeaderboardCreatorDemo
 
         private void LoadEntries()
         {
-            Leaderboards.KiJBTT.GetEntries(entries =>
+            Leaderboards.KiJBMonza.GetEntries(entries =>
             {
                 foreach (var t in _entryTextObjects)
                     t.text = "";
@@ -43,7 +43,7 @@ namespace LeaderboardCreatorDemo
                 return;
 
             // Envia o tempo para o leaderboard
-            Leaderboards.KiJBTT.UploadNewEntry(
+            Leaderboards.KiJBMonza.UploadNewEntry(
                 _usernameInputField.text,
                 tempoEmMilissegundos,
                 isSuccessful =>

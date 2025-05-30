@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6023303935372300596}
   - component: {fileID: 6023303935372300597}
   m_Layer: 5
-  m_Name: ScoreText (TMP)
+  m_Name: TempoText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 6023303935689559447}
   - component: {fileID: 6023303935689559444}
   m_Layer: 5
-  m_Name: TimeText (TMP)
+  m_Name: DataText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -503,8 +503,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rankText: {fileID: 6023303935615813705}
   _usernameText: {fileID: 6023303936464745723}
-  _scoreText: {fileID: 6023303935372300597}
-  _timeText: {fileID: 6023303935689559444}
+  _timeText: {fileID: 6023303935372300597}
+  _dateText: {fileID: 6023303935689559444}
 --- !u!114 &8119997905076683049
 MonoBehaviour:
   m_ObjectHideFlags: 0

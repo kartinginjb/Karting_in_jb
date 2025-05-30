@@ -10,9 +10,8 @@ namespace Dan.Demo
     {
         [Header("Gameplay:")]
         [SerializeField] private TextMeshProUGUI _playerScoreText;
-        [SerializeField] private Cronometro _cronometro; // Referência ao Cronômetro
+        [SerializeField] private Cronometro _cronometro;
 
-        
         [Header("Leaderboard Essentials:")]
         [SerializeField] private TMP_InputField _playerUsernameInput;
         [SerializeField] private Transform _entryDisplayParent;
@@ -28,21 +27,19 @@ namespace Dan.Demo
         [SerializeField] private RectTransform _personalEntryPanel;
         [SerializeField] private TextMeshProUGUI _personalEntryText;
 
-        
-       
         private int _playerScore;
-        
         private Coroutine _personalEntryMoveCoroutine;
 
         public void AddPlayerScore()
         {
-            _playerScore++;
-            _playerScoreText.text = $"Melhor Tempo: {_cronometro.MelhorTempo}";
+            float tempo = _cronometro.MelhorTempo; // por exemplo: 12.456 segundos
+            _playerScore = Mathf.RoundToInt(tempo * 1000); // salva como milissegundos
+            _playerScoreText.text = $"Melhor Tempo: {FormatScoreAsTime(_playerScore)}";
         }
-        
+
         public void Load()
         {
-            var timePeriod = 
+            var timePeriod =
                 _timePeriodDropdown.value == 1 ? Dan.Enums.TimePeriodType.Today :
                 _timePeriodDropdown.value == 2 ? Dan.Enums.TimePeriodType.ThisWeek :
                 _timePeriodDropdown.value == 3 ? Dan.Enums.TimePeriodType.ThisMonth :
@@ -51,22 +48,22 @@ namespace Dan.Demo
             var pageNumber = int.TryParse(_pageInput.text, out var pageValue) ? pageValue : _defaultPageNumber;
             pageNumber = Mathf.Max(1, pageNumber);
             _pageInput.text = pageNumber.ToString();
-            
+
             var take = int.TryParse(_entriesToTakeInput.text, out var takeValue) ? takeValue : _defaultEntriesToTake;
             take = Mathf.Clamp(take, 1, 100);
             _entriesToTakeInput.text = take.ToString();
-            
+
             var searchQuery = new LeaderboardSearchQuery
             {
                 Skip = (pageNumber - 1) * take,
                 Take = take,
                 TimePeriod = timePeriod
             };
-            
+
             _pageInput.image.color = Color.white;
             _entriesToTakeInput.image.color = Color.white;
-            
-            Leaderboards.KiJBTT.GetEntries(searchQuery, OnLeaderboardLoaded, ErrorCallback);
+
+            Leaderboards.KiJBMonza.GetEntries(searchQuery, OnLeaderboardLoaded, ErrorCallback);
             ToggleLoadingPanel(true);
         }
 
@@ -77,18 +74,33 @@ namespace Dan.Demo
             if (pageNumber < 1) return;
             _pageInput.text = pageNumber.ToString();
         }
-        
+
         private void OnLeaderboardLoaded(Entry[] entries)
         {
-            foreach (Transform t in _entryDisplayParent) 
+            foreach (Transform t in _entryDisplayParent)
                 Destroy(t.gameObject);
 
-            foreach (var t in entries) 
-                CreateEntryDisplay(t);
-            
+            foreach (var entry in entries)
+                CreateEntryDisplay(entry);
+
             ToggleLoadingPanel(false);
         }
-        
+
+        private void CreateEntryDisplay(Entry entry)
+        {
+            var entryDisplay = Instantiate(_entryDisplayPrefab.gameObject, _entryDisplayParent);
+            entryDisplay.GetComponent<EntryDisplay>().SetEntry(entry); // ✅ Corrigido aqui
+        }
+
+        private string FormatScoreAsTime(float tempo)
+        {
+            float tempoSegundos = tempo / 1000f;
+            int minutos = Mathf.FloorToInt(tempoSegundos / 60f);
+            int segundos = Mathf.FloorToInt(tempoSegundos % 60f);
+            int milissegundos = Mathf.FloorToInt((tempoSegundos * 1000f) % 1000f);
+            return $"{minutos:00}:{segundos:00}:{milissegundos:000}";
+        }
+
         private void ToggleLoadingPanel(bool isOn)
         {
             _leaderboardLoadingPanel.alpha = isOn ? 1f : 0f;
@@ -98,9 +110,9 @@ namespace Dan.Demo
 
         public void MovePersonalEntryMenu(float xPos)
         {
-            if (_personalEntryMoveCoroutine != null) 
+            if (_personalEntryMoveCoroutine != null)
                 StopCoroutine(_personalEntryMoveCoroutine);
-            _personalEntryMoveCoroutine = StartCoroutine(MoveMenuCoroutine(_personalEntryPanel, 
+            _personalEntryMoveCoroutine = StartCoroutine(MoveMenuCoroutine(_personalEntryPanel,
                 new Vector2(xPos, _personalEntryPanel.anchoredPosition.y)));
         }
 
@@ -115,15 +127,9 @@ namespace Dan.Demo
                 rectTransform.anchoredPosition = Vector2.Lerp(startPosition, anchoredPosition, time / duration);
                 yield return null;
             }
-            
+
             rectTransform.anchoredPosition = anchoredPosition;
             _personalEntryMoveCoroutine = null;
-        }
-        
-        private void CreateEntryDisplay(Entry entry)
-        {
-            var entryDisplay = Instantiate(_entryDisplayPrefab.gameObject, _entryDisplayParent);
-            entryDisplay.GetComponent<EntryDisplay>().SetEntry(entry);
         }
 
         private IEnumerator LoadingTextCoroutine(TMP_Text text)
@@ -135,7 +141,7 @@ namespace Dan.Demo
                 text.text = loadingText;
                 yield return new WaitForSeconds(0.25f);
             }
-            
+
             StartCoroutine(LoadingTextCoroutine(text));
         }
 
@@ -149,7 +155,7 @@ namespace Dan.Demo
             _pageInput.placeholder.GetComponent<TextMeshProUGUI>().text = _defaultPageNumber.ToString();
             _entriesToTakeInput.placeholder.GetComponent<TextMeshProUGUI>().text = _defaultEntriesToTake.ToString();
         }
-        
+
         private void Start()
         {
             InitializeComponents();
@@ -158,12 +164,12 @@ namespace Dan.Demo
 
         public void Submit()
         {
-            Leaderboards.KiJBTT.UploadNewEntry(_playerUsernameInput.text, _playerScore, Callback, ErrorCallback);
+            Leaderboards.KiJBMonza.UploadNewEntry(_playerUsernameInput.text, _playerScore, Callback, ErrorCallback);
         }
-        
+
         public void DeleteEntry()
         {
-            Leaderboards.KiJBTT.DeleteEntry(Callback, ErrorCallback);
+            Leaderboards.KiJBMonza.DeleteEntry(Callback, ErrorCallback);
         }
 
         public void ResetPlayer()
@@ -173,21 +179,21 @@ namespace Dan.Demo
 
         public void GetPersonalEntry()
         {
-            Leaderboards.KiJBTT.GetPersonalEntry(OnPersonalEntryLoaded, ErrorCallback);
+            Leaderboards.KiJBMonza.GetPersonalEntry(OnPersonalEntryLoaded, ErrorCallback);
         }
 
         private void OnPersonalEntryLoaded(Entry entry)
         {
-            _personalEntryText.text = $"{entry.RankSuffix()}. {entry.Username} : {entry.Score}";
+            _personalEntryText.text = $"{entry.RankSuffix()}. {entry.Username} : {FormatScoreAsTime(entry.Score)}";
             MovePersonalEntryMenu(0f);
         }
-        
+
         private void Callback(bool success)
         {
             if (success)
                 Load();
         }
-        
+
         private void ErrorCallback(string error)
         {
             Debug.LogError(error);

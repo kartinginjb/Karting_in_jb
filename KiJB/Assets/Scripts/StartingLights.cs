@@ -1,18 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using static System.Net.Mime.MediaTypeNames;
-using System.Diagnostics;
 
 public class StartingLights : MonoBehaviour
 {
     public Cronometro cronometro;
-    public UnityEngine.UI.Image red1;
-    public UnityEngine.UI.Image red2;
-    public UnityEngine.UI.Image red3;
-    public UnityEngine.UI.Image green;
+    public Image red1;
+    public Image red2;
+    public Image red3;
+    public Image green;
 
-    public carro carro;             // Refer�ncia ao script "carro"
+    public carro carro; // Referência ao script "carro"
 
     void Start()
     {
@@ -21,42 +19,44 @@ public class StartingLights : MonoBehaviour
 
     IEnumerator StartSequence()
     {
-        //desliga todas as luzes
+        // Desliga todas as luzes
         red1.enabled = false;
         red2.enabled = false;
         red3.enabled = false;
         green.enabled = false;
 
-        //n�o permite o carro acelerar
+        // Impede o carro de acelerar
         carro.podeAcelerar = false;
 
-        //liga sequencialmente as luzes de apagado a amarelo
+        // Liga as luzes vermelhas uma a uma
         yield return new WaitForSeconds(1f);
         red1.enabled = true;
-        UnityEngine.Debug.Log("Red1 ON");
+        Debug.Log("Red1 ON");
         yield return new WaitForSeconds(1f);
         red2.enabled = true;
-        UnityEngine.Debug.Log("Red2 ON");
+        Debug.Log("Red2 ON");
         yield return new WaitForSeconds(1f);
         red3.enabled = true;
-        UnityEngine.Debug.Log("Red3 ON");
+        Debug.Log("Red3 ON");
         yield return new WaitForSeconds(1f);
 
-        //desliga as luzes de apagado a amarelo
+        // Desliga as luzes vermelhas
         red1.enabled = false;
         red2.enabled = false;
         red3.enabled = false;
 
-        //liga a luz verde
+        // Liga a luz verde
         green.enabled = true;
-        UnityEngine.Debug.Log("Green ON");
+        Debug.Log("Green ON");
 
-        //permite o carro acelerar 
+        // Permite o carro acelerar
         carro.podeAcelerar = true;
 
-        //desliga a luz verde
+        // 👉 INICIA O CRONÓMETRO AQUI
+        cronometro.ComecarCronometro();
+
+        // Desliga a luz verde após 1.5 segundos
         yield return new WaitForSeconds(1.5f);
         green.enabled = false;
     }
-
 }

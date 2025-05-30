@@ -1,0 +1,21 @@
+using UnityEngine;
+
+public class MenuController : MonoBehaviour
+{
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M)) // Pressione M para abrir/fechar
+        {
+            ToggleLeaderboard();
+        }
+    }
+
+    public void ToggleLeaderboard()
+    {
+        bool isActive = gameObject.activeSelf;
+        gameObject.SetActive(!isActive);
+
+        // Pausar/despausar o jogo (opcional)
+        Time.timeScale = isActive ? 1f : 0f;
+    }
+}
