@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Dan.Demo
 {
-    public class LeaderboardShowcaseMonza : MonoBehaviour
+    public class LeaderboardShowcaseCampo : MonoBehaviour
     {
         [Header("Gameplay:")]
         [SerializeField] private TextMeshProUGUI _playerScoreText;
@@ -28,7 +28,7 @@ namespace Dan.Demo
         [SerializeField] private TextMeshProUGUI _personalEntryText;
 
         [Header("UI Feedback:")]
-        [SerializeField] private GameObject _noTimeWarningPanel; // ⚠️ Painel para aviso visual
+        [SerializeField] private GameObject _noTimeWarningPanel; // ⚠️ Novo painel para feedback visual
 
         private int _playerScore;
         private Coroutine _personalEntryMoveCoroutine;
@@ -66,7 +66,7 @@ namespace Dan.Demo
             _pageInput.image.color = Color.white;
             _entriesToTakeInput.image.color = Color.white;
 
-            Leaderboards.KiJBMonza.GetEntries(searchQuery, OnLeaderboardLoaded, ErrorCallback);
+            Leaderboards.KiJBCampo.GetEntries(searchQuery, OnLeaderboardLoaded, ErrorCallback);
             ToggleLoadingPanel(true);
         }
 
@@ -167,7 +167,7 @@ namespace Dan.Demo
 
         public void Submit()
         {
-            // ✅ Validação de tempo para evitar envio vazio
+            // ✅ Validação de tempo antes do envio
             if (_cronometro.MelhorTempo <= 0f || float.IsNaN(_cronometro.MelhorTempo) || _playerScore <= 0)
             {
                 Debug.LogWarning("Tentativa de envio sem tempo válido.");
@@ -178,13 +178,13 @@ namespace Dan.Demo
                 return;
             }
 
-            Leaderboards.KiJBMonza.UploadNewEntry(_playerUsernameInput.text, _playerScore, Callback, ErrorCallback);
+            Leaderboards.KiJBCampo.UploadNewEntry(_playerUsernameInput.text, _playerScore, Callback, ErrorCallback);
         }
 
         public void DeleteEntry()
         {
-            // ✅ Exclusão SEM validação de tempo
-            Leaderboards.KiJBMonza.DeleteEntry(Callback, ErrorCallback);
+            // ✅ Permite apagar entrada mesmo que não haja tempo
+            Leaderboards.KiJBCampo.DeleteEntry(Callback, ErrorCallback);
         }
 
         public void ResetPlayer()
@@ -194,7 +194,7 @@ namespace Dan.Demo
 
         public void GetPersonalEntry()
         {
-            Leaderboards.KiJBMonza.GetPersonalEntry(OnPersonalEntryLoaded, ErrorCallback);
+            Leaderboards.KiJBCampo.GetPersonalEntry(OnPersonalEntryLoaded, ErrorCallback);
         }
 
         private void OnPersonalEntryLoaded(Entry entry)

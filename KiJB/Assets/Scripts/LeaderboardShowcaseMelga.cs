@@ -27,13 +27,16 @@ namespace Dan.Demo
         [SerializeField] private RectTransform _personalEntryPanel;
         [SerializeField] private TextMeshProUGUI _personalEntryText;
 
+        [Header("UI Feedback:")]
+        [SerializeField] private GameObject _noTimeWarningPanel; // ⚠️ Novo painel para feedback visual
+
         private int _playerScore;
         private Coroutine _personalEntryMoveCoroutine;
 
         public void AddPlayerScore()
         {
-            float tempo = _cronometro.MelhorTempo; // por exemplo: 12.456 segundos
-            _playerScore = Mathf.RoundToInt(tempo * 1000); // salva como milissegundos
+            float tempo = _cronometro.MelhorTempo;
+            _playerScore = Mathf.RoundToInt(tempo * 1000);
             _playerScoreText.text = $"Melhor Tempo: {FormatScoreAsTime(_playerScore)}";
         }
 
@@ -89,7 +92,7 @@ namespace Dan.Demo
         private void CreateEntryDisplay(Entry entry)
         {
             var entryDisplay = Instantiate(_entryDisplayPrefab.gameObject, _entryDisplayParent);
-            entryDisplay.GetComponent<EntryDisplay>().SetEntry(entry); // ✅ Corrigido aqui
+            entryDisplay.GetComponent<EntryDisplay>().SetEntry(entry);
         }
 
         private string FormatScoreAsTime(float tempo)
@@ -164,11 +167,23 @@ namespace Dan.Demo
 
         public void Submit()
         {
+            // ✅ Validação de tempo antes do envio
+            if (_cronometro.MelhorTempo <= 0f || float.IsNaN(_cronometro.MelhorTempo) || _playerScore <= 0)
+            {
+                Debug.LogWarning("Tentativa de envio sem tempo válido.");
+                if (_noTimeWarningPanel != null)
+                {
+                    _noTimeWarningPanel.SetActive(true);
+                }
+                return;
+            }
+
             Leaderboards.KiJBMelga.UploadNewEntry(_playerUsernameInput.text, _playerScore, Callback, ErrorCallback);
         }
 
         public void DeleteEntry()
         {
+            // ✅ Permite apagar entrada mesmo que não haja tempo
             Leaderboards.KiJBMelga.DeleteEntry(Callback, ErrorCallback);
         }
 
