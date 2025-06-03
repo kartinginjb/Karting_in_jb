@@ -7686,6 +7686,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 279853600}
   - {fileID: 1174107849}
   - {fileID: 949472198}
   - {fileID: 41877220}
@@ -9768,8 +9769,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Dan.Demo.LeaderboardShowcaseCampo, Danqzq.LeaderboardCreator
+      - m_Target: {fileID: 1611776142}
+        m_TargetAssemblyTypeName: Dan.Demo.LeaderboardShowcaseBasica, Danqzq.LeaderboardCreator
         m_MethodName: Submit
         m_Mode: 1
         m_Arguments:
@@ -10866,7 +10867,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 279853600}
-  - component: {fileID: 279853599}
+  - component: {fileID: 279853601}
   m_Layer: 0
   m_Name: Leaderboard
   m_TagString: Untagged
@@ -10874,21 +10875,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &279853599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279853598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56fa96a42dea4224185707144b31632a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _entryTextObjects: []
-  _usernameInputField: {fileID: 924671711}
-  _cronometro: {fileID: 1017994009}
 --- !u!4 &279853600
 Transform:
   m_ObjectHideFlags: 0
@@ -10898,16 +10884,31 @@ Transform:
   m_GameObject: {fileID: 279853598}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 227.19376, y: 102.77375, z: -236.31236}
-  m_LocalScale: {x: 0.65002996, y: 0.74030995, z: 0.74030995}
+  m_LocalPosition: {x: -88.5, y: -43.938217, z: -271.6234}
+  m_LocalScale: {x: 0.8947998, y: 0.850931, z: 0.850931}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1286018301}
   - {fileID: 1611776141}
   - {fileID: 1588202949}
   - {fileID: 433375435}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 203492653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &279853601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279853598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09aaa172361dc954e8e146c6a5528d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entryTextObjects: []
+  _usernameInputField: {fileID: 924671711}
+  _cronometro: {fileID: 1017994009}
 --- !u!1 &279859377
 GameObject:
   m_ObjectHideFlags: 0
@@ -40797,7 +40798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b0bba4726e29bf43b94990676da101f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cronometro: {fileID: 0}
+  cronometro: {fileID: 1017994009}
   red1: {fileID: 1501424532}
   red2: {fileID: 738299834}
   red3: {fileID: 718188576}
@@ -50641,8 +50642,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Dan.Demo.LeaderboardShowcaseCampo, Danqzq.LeaderboardCreator
+      - m_Target: {fileID: 1611776142}
+        m_TargetAssemblyTypeName: Dan.Demo.LeaderboardShowcaseBasica, Danqzq.LeaderboardCreator
         m_MethodName: DeleteEntry
         m_Mode: 1
         m_Arguments:
@@ -51847,7 +51848,7 @@ GameObject:
   - component: {fileID: 1504479790}
   - component: {fileID: 1504479793}
   - component: {fileID: 1504479792}
-  - component: {fileID: 1504479791}
+  - component: {fileID: 1504479794}
   m_Layer: 0
   m_Name: Meta
   m_TagString: Untagged
@@ -51870,20 +51871,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 787924318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1504479791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504479789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee3fe3e29c3f31f4f95ae888beaa1631, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cronometro: {fileID: 1017994009}
-  leaderboardShowcase: {fileID: 0}
 --- !u!65 &1504479792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51913,6 +51900,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504479789}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1504479794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504479789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1422df2d1a4e3784b8760a53b3c73ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cronometro: {fileID: 1017994009}
+  leaderboardShowcase: {fileID: 1611776142}
 --- !u!1 &1510020856
 GameObject:
   m_ObjectHideFlags: 0
@@ -69001,9 +69002,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Dan.LeaderboardCreator.Demo.LeaderboardShowcase,
-          Dan.LeaderboardCreator
+      - m_Target: {fileID: 1611776142}
+        m_TargetAssemblyTypeName: Dan.Demo.LeaderboardShowcaseBasica, Danqzq.LeaderboardCreator
         m_MethodName: Load
         m_Mode: 1
         m_Arguments:
@@ -74092,7 +74092,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1728038360}
   m_HandleRect: {fileID: 1728038359}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -74332,4 +74332,3 @@ SceneRoots:
   - {fileID: 787924318}
   - {fileID: 1801993237}
   - {fileID: 1299772597}
-  - {fileID: 279853600}
