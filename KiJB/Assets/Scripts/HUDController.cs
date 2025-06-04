@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using System;
 
 public class HUDController : MonoBehaviour
 {
@@ -9,27 +8,29 @@ public class HUDController : MonoBehaviour
     public TextMeshProUGUI textVelocidade;
     public TextMeshProUGUI textVoltas;
 
-    public carro carro; // Refer�ncia ao script do carro
+    public carro carro; // Referência ao script do carro
 
     void Update()
     {
+        // Mostrar número de voltas
         textVoltas.text = Mathf.RoundToInt(carro.voltas).ToString() + " Voltas";
-        textRPM.text = Mathf.RoundToInt(carro.rpm).ToString() + " RPM";             //recebe o valor das RPM do script carro
-        textVelocidade.text = Mathf.RoundToInt(carro.veloKMH).ToString() + " KM/H"; //recebe o valor da velocidade do script carro
-            
-            //verifica se o jogador est� a acelerar para a frente // tr�s 
-        if (Input.GetAxis("Vertical") == 0)
+
+        // Mostrar RPM e Velocidade
+        textRPM.text = Mathf.RoundToInt(carro.rpm).ToString() + " RPM";
+        textVelocidade.text = Mathf.RoundToInt(carro.veloKMH).ToString() + " KM/H";
+
+        // Lógica realista da marcha
+        if (carro.emMarchaRe)
+        {
+            textMudanca.text = "R";
+        }
+        else if (carro.veloKMH < 1f)
         {
             textMudanca.text = "N";
         }
-            if (Input.GetAxis("Vertical") == 1)
-            {
-                textMudanca.text = "1";
-            } 
-                if (Input.GetAxis("Vertical") == -1)
-                {
-                    textMudanca.text = "R";
-                }
+        else
+        {
+            textMudanca.text = "1";
+        }
     }
 }
-   

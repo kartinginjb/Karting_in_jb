@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class carro : MonoBehaviour
 {
-    public WheelCollider[] guiar; // [0]=frente esq, [1]=frente dir, [2]=trás esq, [3]=trás dir
+    public WheelCollider[] guiar;
 
     float guia = 0f;
     float acc = 0f;
@@ -14,7 +14,7 @@ public class carro : MonoBehaviour
     public float forcaTravagem = 1400f;
 
     public float veloKMH;
-    public float rpm ;
+    public float rpm;
 
     public float[] raioMudancas;
     public int mudancaAtual = 0;
@@ -25,7 +25,7 @@ public class carro : MonoBehaviour
     public Vector3 forcaFinal;
 
     public bool podeAcelerar = true;
-    private bool emMarchaRe = false;
+    public bool emMarchaRe = false; // <--- Agora é PUBLIC
 
     public int voltas = 0;
 
@@ -33,13 +33,13 @@ public class carro : MonoBehaviour
 
     public turbo[] drs;
 
-    public AudioClip somCarro;          //som do carro
-    public AudioSource audioCarro;      //componente de audio
+    public AudioClip somCarro;
+    public AudioSource audioCarro;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.centerOfMass = new Vector3(0f, -1.2f, 0f); // 🔽 baixar bem o centro de massa
+        rb.centerOfMass = new Vector3(0f, -1.2f, 0f);
 
         audioCarro.clip = somCarro;
 
@@ -48,8 +48,6 @@ public class carro : MonoBehaviour
             AjustarFriccao(guiar[i], i >= 2);
             AjustarSuspensao(guiar[i]);
         }
-
-
     }
 
     void Update()
@@ -89,78 +87,83 @@ public class carro : MonoBehaviour
         UnityEngine.Debug.Log("Volta Realizada " + voltas);
     }
 
-    void FixedUpdate()
+void FixedUpdate()
+{
+    veloKMH = rb.linearVelocity.magnitude * 3.6f;
+    float input = podeAcelerar ? acc : 0f;
+
+    // Direção firme e controlada
+    float steerMax = Mathf.Lerp(18f, 8f, rb.linearVelocity.magnitude / 100f);
+    float steerDesejado = guia * steerMax;
+    steerAtual = Mathf.Lerp(steerAtual, steerDesejado, Time.fixedDeltaTime * 8f);
+
+    guiar[0].steerAngle = steerAtual;
+    guiar[1].steerAngle = steerAtual;
+
+    // Travagem com ação imediata ao carregar no S e travagem passiva mais suave
+    float travagem = 0f;
+
+    if (input < -0.1f)
     {
-        veloKMH = rb.linearVelocity.magnitude * 3.6f;
-        float input = podeAcelerar ? acc : 0f;
-
-        // Direção firme e controlada
-        float steerMax = Mathf.Lerp(18f, 8f, rb.linearVelocity.magnitude / 100f);
-        float steerDesejado = guia * steerMax;
-        steerAtual = Mathf.Lerp(steerAtual, steerDesejado, Time.fixedDeltaTime * 8f);
-
-        guiar[0].steerAngle = steerAtual;
-        guiar[1].steerAngle = steerAtual;
-
-        // Travagem sensata
-        float travagem = 0f;
-        if (!emMarchaRe)
-        {
-            if (input < -0.1f && veloKMH > 2f)
-                travagem = forcaTravagem; // travagem activa
-            else if (Mathf.Abs(input) < 0.05f && veloKMH > 5f)
-                travagem = forcaTravagem * 0.6f; // travagem passiva ao largar
-        }
-        else
-        {
-            if (input > 0.1f && veloKMH > 2f)
-                travagem = forcaTravagem; // travagem ao inverter sentido em marcha atrás
-        }
-
-
-        guiar[2].brakeTorque = travagem;
-        guiar[3].brakeTorque = travagem;
-
-        // Lógica de marcha atrás com suavidade
-        if (veloKMH < 1f && input < -0.1f)
-            emMarchaRe = true;
-        else if (input > 0.1f)
-            emMarchaRe = false;
-
-        float torqueFinal = 0f;
-
-        if (emMarchaRe)
-            torqueFinal = Mathf.Clamp(input, -1f, 0f) * maxTorque * 0.4f;
-        else if (input > 0.01f)
-            torqueFinal = input * maxTorque;
-
-        guiar[2].motorTorque = torqueFinal;
-        guiar[3].motorTorque = torqueFinal;
-
-        // Lógica de mudanças
-        rpm = veloKMH * raioMudancas[Mathf.Clamp(mudancaAtual, 0, raioMudancas.Length - 1)] * 15f;
-
-        if (rpm > maxRPM)
-            mudancaAtual = Mathf.Min(mudancaAtual + 1, raioMudancas.Length - 1);
-        else if (rpm < minRPM)
-            mudancaAtual = Mathf.Max(mudancaAtual - 1, 0);
-
-        forcaFinal = transform.forward * torqueFinal;
-
-        // Força descendente constante
-        if (veloKMH > 10f)
-            rb.AddForce(-transform.up * veloKMH * 40f);
-
-
-        // Aplica barra estabilizadora nos dois eixos
-        AplicarAntiRoll(guiar[0], guiar[1], 10000f); // frente
-        AplicarAntiRoll(guiar[2], guiar[3], 8000f);  // trás
-
-        // Audio do carro
-        audioCarro.pitch = 0.6f + veloKMH / 50f;
-
+        travagem = forcaTravagem;  // Travagem ativa imediata
     }
-        
+    else if (Mathf.Abs(input) < 0.05f && veloKMH > 5f)
+    {
+        travagem = forcaTravagem * 0.3f;  // Travagem passiva suave
+    }
+
+    guiar[2].brakeTorque = travagem;
+    guiar[3].brakeTorque = travagem;
+
+    // Lógica de marcha atrás com suavidade
+    if (veloKMH < 2f && input < -0.1f)
+        emMarchaRe = true;
+    else if (input > 0.1f)
+        emMarchaRe = false;
+
+    float torqueFinal = 0f;
+
+    if (emMarchaRe)
+        torqueFinal = Mathf.Clamp(input, -1f, 0f) * maxTorque * 0.4f;
+    else if (input > 0.01f)
+        torqueFinal = input * maxTorque;
+
+    guiar[2].motorTorque = torqueFinal;
+    guiar[3].motorTorque = torqueFinal;
+
+    // Lógica de mudanças
+    rpm = veloKMH * raioMudancas[Mathf.Clamp(mudancaAtual, 0, raioMudancas.Length - 1)] * 15f;
+
+    if (rpm > maxRPM)
+        mudancaAtual = Mathf.Min(mudancaAtual + 1, raioMudancas.Length - 1);
+    else if (rpm < minRPM)
+        mudancaAtual = Mathf.Max(mudancaAtual - 1, 0);
+
+    forcaFinal = transform.forward * torqueFinal;
+
+    // Força descendente constante
+    if (veloKMH > 10f)
+        rb.AddForce(-transform.up * veloKMH * 40f);
+
+    // **Aqui está a tua lógica adicionada para ajudar na subida**
+    Vector3 direcaoSubida = Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
+    float inclinacao = Vector3.Dot(transform.forward, Vector3.up);
+
+    if (inclinacao > 0.1f && acc > 0.1f)
+    {
+        float compensacao = inclinacao * 1000f;
+        rb.AddForce(direcaoSubida * compensacao, ForceMode.Force);
+    }
+
+    // Aplica barra estabilizadora nos dois eixos
+    AplicarAntiRoll(guiar[0], guiar[1], 10000f); // frente
+    AplicarAntiRoll(guiar[2], guiar[3], 8000f);  // trás
+
+    // Audio do carro
+    audioCarro.pitch = 0.6f + veloKMH / 50f;
+}
+
+
     void AjustarFriccao(WheelCollider roda, bool traseira)
     {
         WheelFrictionCurve fric = roda.sidewaysFriction;
@@ -183,12 +186,11 @@ public class carro : MonoBehaviour
     void AjustarSuspensao(WheelCollider roda)
     {
         JointSpring spring = roda.suspensionSpring;
-        spring.spring = 50000f;    // ainda mais firme
-        spring.damper = 1200f;     // mais controle nos saltos
+        spring.spring = 50000f;
+        spring.damper = 1200f;
         roda.suspensionSpring = spring;
-        roda.suspensionDistance = 0.35f; // menor distância ainda
-
-        roda.forceAppPointDistance = 0.02f; // bem junto à roda
+        roda.suspensionDistance = 0.35f;
+        roda.forceAppPointDistance = 0.02f;
     }
 
     void AplicarAntiRoll(WheelCollider rodaEsq, WheelCollider rodaDir, float forca)
