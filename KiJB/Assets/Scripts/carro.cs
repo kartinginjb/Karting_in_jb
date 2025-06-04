@@ -103,7 +103,7 @@ void FixedUpdate()
     // Travagem com ação imediata ao carregar no S e travagem passiva mais suave
     float travagem = 0f;
 
-    if (input < -0.1f)
+    if (input < -0.1f && !emMarchaRe)
     {
         travagem = forcaTravagem;  // Travagem ativa imediata
     }
@@ -115,18 +115,22 @@ void FixedUpdate()
     guiar[2].brakeTorque = travagem;
     guiar[3].brakeTorque = travagem;
 
-    // Lógica de marcha atrás com suavidade
-    if (veloKMH < 2f && input < -0.1f)
+    // Lógica de marcha-atrás (ré)
+    if (!emMarchaRe && veloKMH < 3f && input < -0.2f)
         emMarchaRe = true;
-    else if (input > 0.1f)
+    else if (emMarchaRe && input > 0.1f)
         emMarchaRe = false;
 
     float torqueFinal = 0f;
 
     if (emMarchaRe)
-        torqueFinal = Mathf.Clamp(input, -1f, 0f) * maxTorque * 0.4f;
+    {
+        torqueFinal = Mathf.Clamp(input, -1f, 0f) * maxTorque * 0.5f;
+    }
     else if (input > 0.01f)
+    {
         torqueFinal = input * maxTorque;
+    }
 
     guiar[2].motorTorque = torqueFinal;
     guiar[3].motorTorque = torqueFinal;
@@ -145,7 +149,7 @@ void FixedUpdate()
     if (veloKMH > 10f)
         rb.AddForce(-transform.up * veloKMH * 40f);
 
-    // **Aqui está a tua lógica adicionada para ajudar na subida**
+    // Ajuda em subidas
     Vector3 direcaoSubida = Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
     float inclinacao = Vector3.Dot(transform.forward, Vector3.up);
 
@@ -155,13 +159,14 @@ void FixedUpdate()
         rb.AddForce(direcaoSubida * compensacao, ForceMode.Force);
     }
 
-    // Aplica barra estabilizadora nos dois eixos
+    // Anti-roll
     AplicarAntiRoll(guiar[0], guiar[1], 10000f); // frente
     AplicarAntiRoll(guiar[2], guiar[3], 8000f);  // trás
 
-    // Audio do carro
+    // Som do carro
     audioCarro.pitch = 0.6f + veloKMH / 50f;
 }
+
 
 
     void AjustarFriccao(WheelCollider roda, bool traseira)
