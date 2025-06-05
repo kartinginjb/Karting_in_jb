@@ -46,6 +46,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 1
+    - _AlphaToMask: 0
     - _Cull: 0
     - _DstBlend: 10
     - _DstBlendAlpha: 10

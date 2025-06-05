@@ -1,14 +1,15 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using TMPro;
 
 public class KartSelector : MonoBehaviour
 {
-    public GameObject[] karts; // Array com os 10 karts disponíveis
-    private int kartSelecionado = 0; // Índice do kart atualmente selecionado
+    public GameObject[] karts; // Array com os karts disponÃ­veis
+    public TextMeshProUGUI nomeDoKartText; // Texto que mostra o nome do kart
+
+    private int kartSelecionado = 0;
 
     void Start()
     {
-        // Se já tiver um kart salvo no KartSelectionManager, carrega ele
         if (KartSelectionManager.Instance != null)
         {
             kartSelecionado = KartSelectionManager.Instance.kartSelecionado;
@@ -19,21 +20,17 @@ public class KartSelector : MonoBehaviour
 
     public void MudarKart(int direcao)
     {
-        // Avança (+1) ou retrocede (-1) na seleção
         kartSelecionado += direcao;
 
-        // Se passar do último, volta para o primeiro
         if (kartSelecionado >= karts.Length)
         {
             kartSelecionado = 0;
         }
-        // Se for menor que o primeiro, volta para o último
         else if (kartSelecionado < 0)
         {
             kartSelecionado = karts.Length - 1;
         }
 
-        // Atualiza o gerenciador global com o novo kart selecionado
         if (KartSelectionManager.Instance != null)
         {
             KartSelectionManager.Instance.SelecionarKart(kartSelecionado);
@@ -44,10 +41,15 @@ public class KartSelector : MonoBehaviour
 
     void AtualizarVisualizacao()
     {
-        // Ativa apenas o kart atualmente selecionado
         for (int i = 0; i < karts.Length; i++)
         {
             karts[i].SetActive(i == kartSelecionado);
+        }
+
+        // Atualiza o nome do kart no TextMeshPro diretamente com o nome do GameObject
+        if (nomeDoKartText != null)
+        {
+            nomeDoKartText.text = karts[kartSelecionado].name;
         }
     }
 }
