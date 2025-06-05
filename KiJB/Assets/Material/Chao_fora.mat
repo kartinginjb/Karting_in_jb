@@ -12,21 +12,17 @@ Material:
   m_Parent: {fileID: 2100000, guid: 25b9e884652d25e4490c43d556cd616c, type: 2}
   m_ModifiedSerializedProperties: 24
   m_ValidKeywords:
-  - _ALPHAPREMULTIPLY_ON
   - _ALPHATEST_ON
   - _SPECULAR_SETUP
-  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 2450
   stringTagMap:
-    RenderType: Transparent
+    RenderType: TransparentCutout
   disabledShaderPasses:
   - MOTIONVECTORS
-  - DepthOnly
-  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -45,9 +41,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaToMask: 1
     - _Cull: 2
+    - _DstBlend: 0
+    - _DstBlendAlpha: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
+    - _Surface: 0
+    - _ZWrite: 1
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

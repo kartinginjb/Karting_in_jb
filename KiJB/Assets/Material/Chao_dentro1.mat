@@ -10,14 +10,14 @@ Material:
   m_Name: Chao_dentro1
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 2100000, guid: f536703ecf26b0f43af3646f9c789d80, type: 2}
-  m_ModifiedSerializedProperties: 16
+  m_ModifiedSerializedProperties: 24
   m_ValidKeywords:
   - _RECEIVE_SHADOWS_OFF
   - _SPECULAR_SETUP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 2000
   stringTagMap:
     RenderType: Opaque
@@ -37,8 +37,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Cull: 0
+    - _DstBlend: 0
+    - _DstBlendAlpha: 0
     - _ReceiveShadows: 0
+    - _Surface: 0
     - _WorkflowMode: 0
+    - _ZWrite: 1
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

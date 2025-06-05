@@ -10949,6 +10949,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8270237889823493819, guid: 692dc2495740d504d82c465fc3e0b536, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f63a762feb9d9b349aaa9b09701f3f5d, type: 2}
     - target: {fileID: -7918335002988649766, guid: 692dc2495740d504d82c465fc3e0b536, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -10957,6 +10961,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 73dd6872011d5384fad341a41417e6f5, type: 2}
+    - target: {fileID: -6237538820928943993, guid: 692dc2495740d504d82c465fc3e0b536, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6237538820928943993, guid: 692dc2495740d504d82c465fc3e0b536, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a7ef471f92bed9f4d91e7bef8cbb3eda, type: 2}
     - target: {fileID: -5754732837579649886, guid: 692dc2495740d504d82c465fc3e0b536, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -10969,6 +10981,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 35ff67bd8a9bf8e40a122eaa6984063c, type: 2}
+    - target: {fileID: -3856571041627856340, guid: 692dc2495740d504d82c465fc3e0b536, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a7ef471f92bed9f4d91e7bef8cbb3eda, type: 2}
+    - target: {fileID: -3409317945832539391, guid: 692dc2495740d504d82c465fc3e0b536, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 298cf32457eb1ba4bb567bddb9d167dd, type: 2}
     - target: {fileID: -2473424575180118478, guid: 692dc2495740d504d82c465fc3e0b536, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -37189,6 +37209,7 @@ MonoBehaviour:
   maxRPM: 11000
   forcaFinal: {x: 0, y: 0, z: 0}
   podeAcelerar: 0
+  emMarchaRe: 0
   voltas: 0
   drs:
   - {fileID: 1694378146}
