@@ -8,20 +8,20 @@ public class TrackSelectionManager : MonoBehaviour
 {
     public static TrackSelectionManager Instance;
 
-    public GameObject[] tracks; // Array com todos os karts disponíveis
-    public int trackSelecionada = 0; // Índice do kart selecionado
+    public GameObject[] tracks; // Array com todos os karts disponï¿½veis
+    public int trackSelecionada = 0; // ï¿½ndice do kart selecionado
 
     private void Awake()
     {
-        // Garante que só existe uma instância
+        // Garante que sï¿½ existe uma instï¿½ncia
         if (Instance == null)
         {
             Instance = this;
-            UnityEngine.Object.DontDestroyOnLoad(gameObject); // Mantém ao trocar de cena
+            UnityEngine.Object.DontDestroyOnLoad(gameObject); // Mantï¿½m ao trocar de cena
         }
         else
         {
-            Destroy(gameObject); // Evita instâncias duplicadas
+            Destroy(gameObject); // Evita instï¿½ncias duplicadas
         }
     }
 
@@ -59,7 +59,7 @@ public class TrackSelectionManager : MonoBehaviour
                 UnityEngine.Debug.Log("Track Selecionada: Jedonaco");
                 break;
             default:
-                UnityEngine.Debug.LogWarning("Track inválido selecionado.");
+                UnityEngine.Debug.LogWarning("Track invï¿½lido selecionado.");
                 break;
         }
     }

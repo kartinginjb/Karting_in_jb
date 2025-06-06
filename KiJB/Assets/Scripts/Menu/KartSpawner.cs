@@ -1,31 +1,35 @@
-using System.Diagnostics;
+using System.Collections;
 using UnityEngine;
 
 public class KartSpawner : MonoBehaviour
 {
     public GameObject[] karts; // Array com todos os karts na cena
 
-    private void Start()
+    private IEnumerator Start()
+{
+    // Espera um frame para garantir que tudo foi carregado
+    yield return null;
+
+    if (KartSelectionManager.Instance == null)
     {
-        if (KartSelectionManager.Instance == null)
-        {
-            UnityEngine.Debug.LogError("KartSelectionManager não encontrado!");
-            return;
-        }
+        Debug.LogError("KartSelectionManager nÃ£o encontrado!");
+        yield break;
+    }
 
-        int kartSelecionado = KartSelectionManager.Instance.kartSelecionado;
+    int kartSelecionado = KartSelectionManager.Instance.kartSelecionado;
+    Debug.Log("Kart selecionado recebido na pista: " + kartSelecionado);
 
-        if (kartSelecionado >= 0 && kartSelecionado < karts.Length)
+    if (kartSelecionado >= 0 && kartSelecionado < karts.Length)
+    {
+        for (int i = 0; i < karts.Length; i++)
         {
-            // Ativa apenas o kart selecionado
-            for (int i = 0; i < karts.Length; i++)
-            {
-                karts[i].SetActive(i == kartSelecionado);
-            }
-        }
-        else
-        {
-            UnityEngine.Debug.LogError("Índice do kart selecionado inválido!");
+            karts[i].SetActive(i == kartSelecionado);
         }
     }
+    else
+    {
+        Debug.LogError("Ãndice do kart selecionado invÃ¡lido!");
+    }
+}
+
 }
