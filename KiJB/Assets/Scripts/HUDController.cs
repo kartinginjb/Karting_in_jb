@@ -17,20 +17,22 @@ public class HUDController : MonoBehaviour
 
         // Mostrar RPM e Velocidade
         textRPM.text = Mathf.RoundToInt(carro.rpm).ToString() + " RPM";
-        textVelocidade.text = Mathf.RoundToInt(carro.veloKMH).ToString() + " KM/H";
+        textVelocidade.text = Mathf.RoundToInt(Mathf.Abs(carro.veloKMH)).ToString() + " KM/H";
 
-        // Lógica realista da marcha
-        if (carro.emMarchaRe)
-        {
-            textMudanca.text = "R";
-        }
-        else if (carro.veloKMH < 1f)
-        {
-            textMudanca.text = "N";
-        }
-        else
-        {
-            textMudanca.text = "1";
-        }
+
+      // Lógica simplificada da marcha sem depender de emMarchaRe
+if (carro.veloKMH < -1f)
+{
+    textMudanca.text = "R";
+}
+else if (Mathf.Abs(carro.veloKMH) < 1f)
+{
+    textMudanca.text = "N";
+}
+else
+{
+    textMudanca.text = "1";
+}
+
     }
 }
