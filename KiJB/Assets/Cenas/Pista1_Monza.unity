@@ -27556,7 +27556,7 @@ MonoBehaviour:
   podeAcelerar: 0
   voltas: 0
   drs:
-  - {fileID: 1694378146}
+  - {fileID: 0}
   somCarro: {fileID: 8300000, guid: ae1853b2f9a28554f83e99b60b5e74d0, type: 3}
   audioCarro: {fileID: 1953847821}
 --- !u!4 &1953847819
@@ -31428,7 +31428,7 @@ Transform:
   m_GameObject: {fileID: 8039666057540227265}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -0.005264402, y: 0.63569814, z: -0.83906376}
+  m_LocalPosition: {x: -0.002, y: 0.63569814, z: -0.839}
   m_LocalScale: {x: 25.030214, y: 25.030216, z: 25.030214}
   m_ConstrainProportionsScale: 0
   m_Children: []

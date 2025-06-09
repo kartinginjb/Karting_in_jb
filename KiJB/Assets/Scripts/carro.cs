@@ -146,11 +146,11 @@ public class carro : MonoBehaviour
     else if (Mathf.Abs(input) < 0.05f)
     {
         // Define força base da travagem passiva (30%)
-        float targetBrakeForce = forcaTravagem * 0.3f;
+        float targetBrakeForce = forcaTravagem * 0.1f;
 
         // Se a velocidade for abaixo de 20 km/h, reduz travagem passiva para 10%
         if (Mathf.Abs(veloKMH) < 20f)
-            targetBrakeForce = forcaTravagem * 0.1f;
+            targetBrakeForce = forcaTravagem * 0.05f;
 
         // Interpola suavemente a travagem para evitar mudanças bruscas
         travagem = Mathf.Lerp(guiar[2].brakeTorque, targetBrakeForce, Time.fixedDeltaTime * 1.5f);
