@@ -58638,7 +58638,10 @@ MonoBehaviour:
   openRotation: {x: -35, y: 0, z: 0}
   closedRotation: {x: 0, y: 0, z: 0}
   openSpeed: 10
-  drs: []
+  drs:
+  - {fileID: 1286122293}
+  - {fileID: 1889913688}
+  - {fileID: 1020635942}
 --- !u!1 &1864311280
 GameObject:
   m_ObjectHideFlags: 0
