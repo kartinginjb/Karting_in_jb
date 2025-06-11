@@ -11,6 +11,7 @@ public class StartingLights : MonoBehaviour
     public Image green;
 
     public carro carro; // Referência ao script "carro"
+    public KartSeguidor kart;  // Referência ao script "KartSeguidor"
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class StartingLights : MonoBehaviour
 
         // Impede o carro de acelerar
         carro.podeAcelerar = false;
+        kart.podeAcelerar = false;
 
         // Liga as luzes vermelhas uma a uma
         yield return new WaitForSeconds(1f);
@@ -51,6 +53,7 @@ public class StartingLights : MonoBehaviour
 
         // Permite o carro acelerar
         carro.podeAcelerar = true;
+        kart.podeAcelerar = true;
 
         // 👉 INICIA O CRONÓMETRO AQUI
         cronometro.ComecarCronometro();
