@@ -22,33 +22,35 @@ public class KartSensor : MonoBehaviour
     private Rigidbody rb;
 
     public enum EstiloConducao { Agressivo, Cauteloso, Desportivo, Impulsivo }
-    public EstiloConducao estilo = EstiloConducao.Desportivo;
+    public int estilo;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
 
+        estilo = UnityEngine.Random.Range(1, 4);
+
         // Aplica o estilo de condução
         switch (estilo)
         {
-            case EstiloConducao.Agressivo:
+            case 1:
                 velocidade = UnityEngine.Random.Range(11f, 13f);
-                forcaRotacao = 7f;
+                forcaRotacao = 10f;
                 distanciaMinima = 4f;
                 break;
-            case EstiloConducao.Cauteloso:
+            case 2:
                 velocidade = UnityEngine.Random.Range(8f, 9f);
-                forcaRotacao = 3.5f;
-                distanciaMinima = 6f;
+                forcaRotacao = 9f;
+                distanciaMinima = 4f;
                 break;
-            case EstiloConducao.Desportivo:
+            case 3:
                 velocidade = UnityEngine.Random.Range(9.5f, 11f);
-                forcaRotacao = 5f;
+                forcaRotacao = 8f;
                 distanciaMinima = 5f;
                 break;
-            case EstiloConducao.Impulsivo:
+            case 4:
                 velocidade = UnityEngine.Random.Range(10f, 12f);
-                forcaRotacao = UnityEngine.Random.Range(4f, 8f);
+                forcaRotacao = 11f;
                 distanciaMinima = 5f;
                 break;
         }
@@ -61,10 +63,10 @@ public class KartSensor : MonoBehaviour
         }
 
         // Direções para sensores (360º)
-        direcoesSensores = new Vector3[16];
-        for (int i = 0; i < 16; i++)
+        direcoesSensores = new Vector3[24];
+        for (int i = 0; i < 24; i++)
         {
-            float angulo = i * 22.5f;
+            float angulo = i * 15f;
             float rad = angulo * Mathf.Deg2Rad;
             direcoesSensores[i] = new Vector3(Mathf.Sin(rad), 0, Mathf.Cos(rad));
         }
