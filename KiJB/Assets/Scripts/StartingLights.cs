@@ -11,7 +11,15 @@ public class StartingLights : MonoBehaviour
     public Image green;
 
     public carro carro; // Referência ao script "carro"
-    public KartSeguidor kart;  // Referência ao script "KartSeguidor"
+
+    // Referência ao script "KartSeguidor" e todos os karts com AI
+    public KartSeguidor piloto1;
+    public KartSeguidor piloto2;
+    public KartSeguidor piloto3;
+    public KartSeguidor piloto4;
+    public KartSeguidor piloto5;
+    public KartSeguidor piloto6;
+    public KartSeguidor piloto7;
 
     void Start()
     {
@@ -28,7 +36,13 @@ public class StartingLights : MonoBehaviour
 
         // Impede o carro de acelerar
         carro.podeAcelerar = false;
-        kart.podeAcelerar = false;
+        piloto1.podeAcelerar = false;
+        piloto2.podeAcelerar = false;
+        piloto3.podeAcelerar = false;
+        piloto4.podeAcelerar = false;
+        piloto5.podeAcelerar = false;
+        piloto6.podeAcelerar = false;
+        piloto7.podeAcelerar = false;
 
         // Liga as luzes vermelhas uma a uma
         yield return new WaitForSeconds(1f);
@@ -53,7 +67,13 @@ public class StartingLights : MonoBehaviour
 
         // Permite o carro acelerar
         carro.podeAcelerar = true;
-        kart.podeAcelerar = true;
+        piloto1.podeAcelerar = true;
+        piloto2.podeAcelerar = true;
+        piloto3.podeAcelerar = true;
+        piloto4.podeAcelerar = true;
+        piloto5.podeAcelerar = true;
+        piloto6.podeAcelerar = true;
+        piloto7.podeAcelerar = true;
 
         // 👉 INICIA O CRONÓMETRO AQUI
         cronometro.ComecarCronometro();
