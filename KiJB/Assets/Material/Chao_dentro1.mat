@@ -12,6 +12,7 @@ Material:
   m_Parent: {fileID: 2100000, guid: f536703ecf26b0f43af3646f9c789d80, type: 2}
   m_ModifiedSerializedProperties: 24
   m_ValidKeywords:
+  - _ENVIRONMENTREFLECTIONS_OFF
   - _RECEIVE_SHADOWS_OFF
   - _SPECULAR_SETUP
   m_InvalidKeywords: []
@@ -40,6 +41,7 @@ Material:
     - _Cull: 0
     - _DstBlend: 0
     - _DstBlendAlpha: 0
+    - _EnvironmentReflections: 0
     - _ReceiveShadows: 0
     - _Surface: 0
     - _WorkflowMode: 0
