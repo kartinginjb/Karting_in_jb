@@ -13,13 +13,13 @@ public class StartingLights : MonoBehaviour
     public carro carro; // Referência ao script "carro"
 
     // Referência ao script "KartSeguidor" e todos os karts com AI
-    public KartSeguidor piloto1;
-    public KartSeguidor piloto2;
-    public KartSeguidor piloto3;
-    public KartSeguidor piloto4;
-    public KartSeguidor piloto5;
-    public KartSeguidor piloto6;
-    public KartSeguidor piloto7;
+    public KartSensor piloto1;
+    public KartSensor piloto2;
+    public KartSensor piloto3;
+    public KartSensor piloto4;
+    public KartSensor piloto5;
+    public KartSensor piloto6;
+    public KartSensor piloto7;
 
     void Start()
     {

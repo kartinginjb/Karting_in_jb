@@ -35,7 +35,7 @@ public class carro : MonoBehaviour
     // Força final aplicada ao carro (vetor), útil para efeitos ou física extra
     public Vector3 forcaFinal;
 
-    // Controla se o carro pode acelerar ou não (ex: após colisão)
+    // Controla se o carro pode acelerar ou não no inicio da corrida
     public bool podeAcelerar = true;
 
     // Contador de voltas feitas pelo jogador

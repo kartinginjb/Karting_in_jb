@@ -21555,7 +21555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 365773469}
   - component: {fileID: 365773471}
-  - component: {fileID: 365773470}
+  - component: {fileID: 365773472}
   m_Layer: 3
   m_Name: Piloto6
   m_TagString: Untagged
@@ -21581,29 +21581,6 @@ Transform:
   - {fileID: 172545622}
   m_Father: {fileID: 1709213979}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &365773470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 365773468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f927bf0d011f454587cefb37b2ee411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caminho: {fileID: 2019644415}
-  velocidade: 5
-  rotacaoVelocidade: 6
-  distanciaMinima: 1
-  podeAcelerar: 0
-  desvioMaximo: 2
-  layerIA:
-    serializedVersion: 2
-    m_Bits: 8
-  detecaoDistancia: 5
-  raioDetecao: 1
 --- !u!54 &365773471
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21631,6 +21608,27 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &365773472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365773468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensorDistancia: 5
+  layerObstaculos:
+    serializedVersion: 2
+    m_Bits: 8
+  podeAcelerar: 0
+  waypointPai: {fileID: 2019644415}
+  velocidade: 10
+  forcaRotacao: 5
+  distanciaMinima: 5
 --- !u!1 &367449437
 GameObject:
   m_ObjectHideFlags: 0
@@ -30623,7 +30621,7 @@ GameObject:
   m_Component:
   - component: {fileID: 517939920}
   - component: {fileID: 517939922}
-  - component: {fileID: 517939921}
+  - component: {fileID: 517939923}
   m_Layer: 3
   m_Name: Piloto2
   m_TagString: Untagged
@@ -30649,29 +30647,6 @@ Transform:
   - {fileID: 1807305010}
   m_Father: {fileID: 1709213979}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &517939921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517939919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f927bf0d011f454587cefb37b2ee411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caminho: {fileID: 2019644415}
-  velocidade: 5
-  rotacaoVelocidade: 6
-  distanciaMinima: 1
-  podeAcelerar: 0
-  desvioMaximo: 2
-  layerIA:
-    serializedVersion: 2
-    m_Bits: 8
-  detecaoDistancia: 5
-  raioDetecao: 1
 --- !u!54 &517939922
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30699,6 +30674,27 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &517939923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517939919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensorDistancia: 5
+  layerObstaculos:
+    serializedVersion: 2
+    m_Bits: 8
+  podeAcelerar: 0
+  waypointPai: {fileID: 2019644415}
+  velocidade: 10
+  forcaRotacao: 5
+  distanciaMinima: 5
 --- !u!64 &518986049
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -36219,7 +36215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 624861728}
   - component: {fileID: 624861730}
-  - component: {fileID: 624861729}
+  - component: {fileID: 624861731}
   m_Layer: 3
   m_Name: Piloto7
   m_TagString: Untagged
@@ -36245,29 +36241,6 @@ Transform:
   - {fileID: 157207311}
   m_Father: {fileID: 1709213979}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &624861729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624861727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f927bf0d011f454587cefb37b2ee411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caminho: {fileID: 2019644415}
-  velocidade: 5
-  rotacaoVelocidade: 6
-  distanciaMinima: 1
-  podeAcelerar: 0
-  desvioMaximo: 2
-  layerIA:
-    serializedVersion: 2
-    m_Bits: 8
-  detecaoDistancia: 5
-  raioDetecao: 1
 --- !u!54 &624861730
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -36295,6 +36268,27 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &624861731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624861727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensorDistancia: 5
+  layerObstaculos:
+    serializedVersion: 2
+    m_Bits: 8
+  podeAcelerar: 0
+  waypointPai: {fileID: 2019644415}
+  velocidade: 10
+  forcaRotacao: 5
+  distanciaMinima: 5
 --- !u!1 &627278634
 GameObject:
   m_ObjectHideFlags: 0
@@ -49446,20 +49440,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 814954343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f927bf0d011f454587cefb37b2ee411, type: 3}
+  m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caminho: {fileID: 2019644415}
-  velocidade: 5
-  rotacaoVelocidade: 6
-  distanciaMinima: 1
-  podeAcelerar: 0
-  desvioMaximo: 2
-  layerIA:
+  sensorDistancia: 5
+  layerObstaculos:
     serializedVersion: 2
     m_Bits: 8
-  detecaoDistancia: 5
-  raioDetecao: 1
+  podeAcelerar: 0
+  waypointPai: {fileID: 2019644415}
+  velocidade: 10
+  forcaRotacao: 5
+  distanciaMinima: 5
 --- !u!1 &815160530
 GameObject:
   m_ObjectHideFlags: 0
@@ -51964,7 +51956,7 @@ Transform:
   m_GameObject: {fileID: 844954256}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.59, y: 0, z: -13.3}
+  m_LocalPosition: {x: -40.59, y: 0.18, z: -13.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -54952,7 +54944,7 @@ Transform:
   m_GameObject: {fileID: 879242972}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.08, y: 0, z: -12.03}
+  m_LocalPosition: {x: 66.08, y: 0.18, z: -12.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -66049,12 +66041,12 @@ MonoBehaviour:
   green: {fileID: 1702712779}
   carro: {fileID: 1771989904}
   piloto1: {fileID: 814954346}
-  piloto2: {fileID: 517939921}
-  piloto3: {fileID: 1127749248}
-  piloto4: {fileID: 2078376223}
-  piloto5: {fileID: 1518465784}
-  piloto6: {fileID: 365773470}
-  piloto7: {fileID: 624861729}
+  piloto2: {fileID: 517939923}
+  piloto3: {fileID: 1127749250}
+  piloto4: {fileID: 2078376225}
+  piloto5: {fileID: 1518465786}
+  piloto6: {fileID: 365773472}
+  piloto7: {fileID: 624861731}
 --- !u!64 &1036354493
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72441,7 +72433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1127749247}
   - component: {fileID: 1127749249}
-  - component: {fileID: 1127749248}
+  - component: {fileID: 1127749250}
   m_Layer: 3
   m_Name: Piloto3
   m_TagString: Untagged
@@ -72467,29 +72459,6 @@ Transform:
   - {fileID: 2096081349}
   m_Father: {fileID: 1709213979}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1127749248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127749246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f927bf0d011f454587cefb37b2ee411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caminho: {fileID: 2019644415}
-  velocidade: 5
-  rotacaoVelocidade: 6
-  distanciaMinima: 1
-  podeAcelerar: 0
-  desvioMaximo: 2
-  layerIA:
-    serializedVersion: 2
-    m_Bits: 8
-  detecaoDistancia: 5
-  raioDetecao: 1
 --- !u!54 &1127749249
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -72517,6 +72486,27 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &1127749250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127749246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensorDistancia: 5
+  layerObstaculos:
+    serializedVersion: 2
+    m_Bits: 8
+  podeAcelerar: 0
+  waypointPai: {fileID: 2019644415}
+  velocidade: 10
+  forcaRotacao: 5
+  distanciaMinima: 5
 --- !u!1 &1127783197
 GameObject:
   m_ObjectHideFlags: 0
@@ -82522,7 +82512,7 @@ Transform:
   m_GameObject: {fileID: 1302455310}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 67.94, y: 0, z: 17.87}
+  m_LocalPosition: {x: 67.94, y: 0.18, z: 17.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -98856,7 +98846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1518465783}
   - component: {fileID: 1518465785}
-  - component: {fileID: 1518465784}
+  - component: {fileID: 1518465786}
   m_Layer: 3
   m_Name: Piloto5
   m_TagString: Untagged
@@ -98882,29 +98872,6 @@ Transform:
   - {fileID: 1837665433}
   m_Father: {fileID: 1709213979}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1518465784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518465782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f927bf0d011f454587cefb37b2ee411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caminho: {fileID: 2019644415}
-  velocidade: 5
-  rotacaoVelocidade: 6
-  distanciaMinima: 1
-  podeAcelerar: 0
-  desvioMaximo: 2
-  layerIA:
-    serializedVersion: 2
-    m_Bits: 8
-  detecaoDistancia: 5
-  raioDetecao: 1
 --- !u!54 &1518465785
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -98932,6 +98899,27 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &1518465786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518465782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensorDistancia: 5
+  layerObstaculos:
+    serializedVersion: 2
+    m_Bits: 8
+  podeAcelerar: 0
+  waypointPai: {fileID: 2019644415}
+  velocidade: 10
+  forcaRotacao: 5
+  distanciaMinima: 5
 --- !u!1 &1521393171
 GameObject:
   m_ObjectHideFlags: 0
@@ -102358,7 +102346,7 @@ Transform:
   m_GameObject: {fileID: 1572891710}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.96, y: 0, z: -9.26}
+  m_LocalPosition: {x: -16.96, y: 0.18, z: -9.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108920,7 +108908,7 @@ Transform:
   m_GameObject: {fileID: 1679715672}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.76, y: 0, z: -13.18}
+  m_LocalPosition: {x: -24.76, y: 0.18, z: -13.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -109409,6 +109397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera1: {fileID: 679030817}
   camera2: {fileID: 580578284}
+  piloto: {fileID: 0}
 --- !u!1 &1690571679
 GameObject:
   m_ObjectHideFlags: 0
@@ -114796,6 +114785,7 @@ MonoBehaviour:
   podeAcelerar: 0
   voltas: 0
   drs:
+  - {fileID: 1662054837}
   - {fileID: 126436147}
   somCarro: {fileID: 8300000, guid: ae1853b2f9a28554f83e99b60b5e74d0, type: 3}
   audioCarro: {fileID: 1771989902}
@@ -133453,7 +133443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2078376222}
   - component: {fileID: 2078376224}
-  - component: {fileID: 2078376223}
+  - component: {fileID: 2078376225}
   m_Layer: 3
   m_Name: Piloto4
   m_TagString: Untagged
@@ -133479,29 +133469,6 @@ Transform:
   - {fileID: 1971540337}
   m_Father: {fileID: 1709213979}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2078376223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2078376221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f927bf0d011f454587cefb37b2ee411, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caminho: {fileID: 2019644415}
-  velocidade: 5
-  rotacaoVelocidade: 6
-  distanciaMinima: 1
-  podeAcelerar: 0
-  desvioMaximo: 2
-  layerIA:
-    serializedVersion: 2
-    m_Bits: 8
-  detecaoDistancia: 5
-  raioDetecao: 1
 --- !u!54 &2078376224
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -133529,6 +133496,27 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &2078376225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078376221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensorDistancia: 5
+  layerObstaculos:
+    serializedVersion: 2
+    m_Bits: 8
+  podeAcelerar: 0
+  waypointPai: {fileID: 2019644415}
+  velocidade: 10
+  forcaRotacao: 5
+  distanciaMinima: 5
 --- !u!64 &2078970132
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -134284,7 +134272,7 @@ Transform:
   m_GameObject: {fileID: 2092204036}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 65.09, y: 0, z: 89.07}
+  m_LocalPosition: {x: 65.09, y: 0.18, z: 89.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
