@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Select_menu
   - Jogador
+  - AI
   layers:
   - Default
   - TransparentFX

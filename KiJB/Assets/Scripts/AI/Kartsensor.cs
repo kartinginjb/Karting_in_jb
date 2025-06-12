@@ -1,3 +1,4 @@
+using System;
 using System.Diagnostics;
 using UnityEngine;
 
@@ -6,30 +7,60 @@ public class KartSensor : MonoBehaviour
     public float sensorDistancia = 5f;
     public LayerMask layerObstaculos;
     private Vector3[] direcoesSensores;
-    public bool podeAcelerar = true;
+    public bool podeAcelerar = false;
 
     [Header("Waypoints")]
-    public Transform waypointPai; // Objeto pai com os waypoints como filhos
+    public Transform waypointPai;
     private Transform[] waypoints;
     private int indexAtual = 0;
-    public float velocidade = 10f;
-    public float forcaRotacao = 5f;
-    public float distanciaMinima = 5f;
+
+    [Header("Movimento")]
+    public float velocidade;
+    public float forcaRotacao;
+    public float distanciaMinima;
 
     private Rigidbody rb;
+
+    public enum EstiloConducao { Agressivo, Cauteloso, Desportivo, Impulsivo }
+    public EstiloConducao estilo = EstiloConducao.Desportivo;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
 
-        // Obter todos os filhos do objeto pai como waypoints
+        // Aplica o estilo de condução
+        switch (estilo)
+        {
+            case EstiloConducao.Agressivo:
+                velocidade = UnityEngine.Random.Range(11f, 13f);
+                forcaRotacao = 7f;
+                distanciaMinima = 4f;
+                break;
+            case EstiloConducao.Cauteloso:
+                velocidade = UnityEngine.Random.Range(8f, 9f);
+                forcaRotacao = 3.5f;
+                distanciaMinima = 6f;
+                break;
+            case EstiloConducao.Desportivo:
+                velocidade = UnityEngine.Random.Range(9.5f, 11f);
+                forcaRotacao = 5f;
+                distanciaMinima = 5f;
+                break;
+            case EstiloConducao.Impulsivo:
+                velocidade = UnityEngine.Random.Range(10f, 12f);
+                forcaRotacao = UnityEngine.Random.Range(4f, 8f);
+                distanciaMinima = 5f;
+                break;
+        }
+
+        // Waypoints
         waypoints = new Transform[waypointPai.childCount];
         for (int i = 0; i < waypointPai.childCount; i++)
         {
             waypoints[i] = waypointPai.GetChild(i);
         }
 
-        // Criar 16 direções distribuídas a 360 graus
+        // Direções para sensores (360º)
         direcoesSensores = new Vector3[16];
         for (int i = 0; i < 16; i++)
         {
@@ -46,26 +77,44 @@ public class KartSensor : MonoBehaviour
         if (!podeAcelerar || waypoints.Length == 0) return;
 
         Transform alvo = waypoints[indexAtual];
-        Vector3 direcao = (alvo.position - transform.position).normalized;
 
-        // Rotação suave
+        // Permite seguir o waypoint sem ir ao centro
+        Vector3 offsetLateral = transform.right * UnityEngine.Random.Range(-2f, 2f);
+        Vector3 alvoComOffset = alvo.position + offsetLateral;
+        Vector3 direcao = (alvoComOffset - transform.position).normalized;
+
+        // Curvas ajustam velocidade
+        float angulo = Vector3.Angle(transform.forward, direcao);
+        float fatorCurva = Mathf.InverseLerp(0f, 90f, angulo);
+        float velocidadeAtual = Mathf.Lerp(velocidade, velocidade * 0.4f, fatorCurva);
+        float rotacaoAtual = Mathf.Lerp(forcaRotacao, forcaRotacao * 2f, fatorCurva);
+
+        // Rodar e mover
         Quaternion rotacaoAlvo = Quaternion.LookRotation(direcao);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotacaoAlvo, forcaRotacao * Time.fixedDeltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotacaoAlvo, rotacaoAtual * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + transform.forward * velocidadeAtual * Time.fixedDeltaTime);
 
-        // Movimento para a frente
-        rb.MovePosition(rb.position + transform.forward * velocidade * Time.fixedDeltaTime);
-
-        // Mudar de waypoint
+        // Passar para o próximo waypoint
         float distancia = Vector3.Distance(transform.position, alvo.position);
         if (distancia < distanciaMinima)
         {
             indexAtual = (indexAtual + 1) % waypoints.Length;
         }
+
+        // Detetar IA e desviar
+        if (Physics.Raycast(transform.position + Vector3.up * 0.5f, transform.forward, out RaycastHit hit, 5f))
+        {
+            if (hit.transform.CompareTag("AI"))
+            {
+                Vector3 direcaoDesvio = UnityEngine.Random.value > 0.5f ? transform.right : -transform.right;
+                transform.position += direcaoDesvio * Time.fixedDeltaTime * 2f;
+            }
+        }
     }
 
     void AtualizarSensores()
     {
-        podeAcelerar = true;
+        bool temObstaculoFrontal = false;
 
         for (int i = 0; i < direcoesSensores.Length; i++)
         {
@@ -79,7 +128,7 @@ public class KartSensor : MonoBehaviour
 
                 if (i == 15 || i == 0 || i == 1 || i == 2)
                 {
-                    podeAcelerar = false;
+                    temObstaculoFrontal = true;
                 }
             }
             else
@@ -87,5 +136,6 @@ public class KartSensor : MonoBehaviour
                 UnityEngine.Debug.DrawRay(ray.origin, direcao * sensorDistancia, Color.green);
             }
         }
+
     }
 }
