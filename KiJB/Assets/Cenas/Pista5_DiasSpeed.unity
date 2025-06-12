@@ -3735,7 +3735,7 @@ PrefabInstance:
     - target: {fileID: -6519139158853247500, guid: 3bdc1ee427b95f847b1266d9c7c018fb, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 73dd6872011d5384fad341a41417e6f5, type: 2}
+      objectReference: {fileID: 2100000, guid: 3aae0303e0efce648b26a34f06120ab3, type: 2}
     - target: {fileID: -5712016018155207210, guid: 3bdc1ee427b95f847b1266d9c7c018fb, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -61070,6 +61070,7 @@ MonoBehaviour:
   red3: {fileID: 1274843202}
   green: {fileID: 1979274518}
   carro: {fileID: 1108847237}
+  kart: {fileID: 0}
 --- !u!1 &1947697266
 GameObject:
   m_ObjectHideFlags: 0
