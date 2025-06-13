@@ -4,7 +4,7 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_CurrentQuality: 1
+  m_CurrentQuality: 2
   m_QualitySettings:
   - serializedVersion: 4
     name: Mobile
@@ -178,7 +178,7 @@ QualitySettings:
     PS5: 1
     Server: 0
     Stadia: 0
-    Standalone: 1
+    Standalone: 2
     WebGL: 0
     Windows Store Apps: 0
     XboxOne: 0
