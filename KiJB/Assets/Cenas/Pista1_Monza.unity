@@ -1844,7 +1844,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34984733}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -11494,10 +11494,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorDistancia: 10
+  sensorDistancia: 7
   layerObstaculos:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 64
   podeAcelerar: 0
   waypointPai: {fileID: 1291944579}
   velocidade: 10
@@ -20114,7 +20114,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347717261}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -30500,7 +30500,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503169474}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -33518,7 +33518,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547444633}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -33981,7 +33981,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562347742}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -38958,7 +38958,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613189546}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -42655,10 +42655,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorDistancia: 10
+  sensorDistancia: 7
   layerObstaculos:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 64
   podeAcelerar: 0
   waypointPai: {fileID: 1291944579}
   velocidade: 10
@@ -45385,10 +45385,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorDistancia: 10
+  sensorDistancia: 7
   layerObstaculos:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 64
   podeAcelerar: 0
   waypointPai: {fileID: 1291944579}
   velocidade: 10
@@ -60397,7 +60397,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936001659}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -68145,7 +68145,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068294162}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -81799,10 +81799,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorDistancia: 10
+  sensorDistancia: 7
   layerObstaculos:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 64
   podeAcelerar: 0
   waypointPai: {fileID: 1291944579}
   velocidade: 10
@@ -103864,10 +103864,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorDistancia: 10
+  sensorDistancia: 7
   layerObstaculos:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 64
   podeAcelerar: 0
   waypointPai: {fileID: 1291944579}
   velocidade: 10
@@ -105235,7 +105235,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624255998}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -106894,7 +106894,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664359322}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -114972,10 +114972,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorDistancia: 10
+  sensorDistancia: 7
   layerObstaculos:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 64
   podeAcelerar: 0
   waypointPai: {fileID: 1291944579}
   velocidade: 10
@@ -122180,7 +122180,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897263436}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -126168,10 +126168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorDistancia: 10
+  sensorDistancia: 7
   layerObstaculos:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 64
   podeAcelerar: 0
   waypointPai: {fileID: 1291944579}
   velocidade: 10
@@ -130074,7 +130074,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027261935}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -133583,7 +133583,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082712677}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
