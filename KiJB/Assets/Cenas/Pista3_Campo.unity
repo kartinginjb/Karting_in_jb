@@ -1666,7 +1666,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37588748}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -13431,7 +13431,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231311180}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -18261,7 +18261,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301636796}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -21620,10 +21620,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorDistancia: 10
+  sensorDistancia: 7
   layerObstaculos:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 64
   podeAcelerar: 0
   waypointPai: {fileID: 2019644415}
   velocidade: 10
@@ -22467,7 +22467,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373718928}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -25887,7 +25887,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438980352}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -30687,10 +30687,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorDistancia: 10
+  sensorDistancia: 7
   layerObstaculos:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 64
   podeAcelerar: 0
   waypointPai: {fileID: 2019644415}
   velocidade: 10
@@ -36282,10 +36282,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorDistancia: 10
+  sensorDistancia: 7
   layerObstaculos:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 64
   podeAcelerar: 0
   waypointPai: {fileID: 2019644415}
   velocidade: 10
@@ -37568,7 +37568,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643658817}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -41067,7 +41067,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689339866}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -41418,7 +41418,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691053636}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -49446,10 +49446,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorDistancia: 10
+  sensorDistancia: 7
   layerObstaculos:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 64
   podeAcelerar: 0
   waypointPai: {fileID: 2019644415}
   velocidade: 10
@@ -50772,7 +50772,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827098979}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -51994,7 +51994,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844954256}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -54982,7 +54982,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879242972}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -60248,7 +60248,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946116257}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -72502,10 +72502,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorDistancia: 10
+  sensorDistancia: 7
   layerObstaculos:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 64
   podeAcelerar: 0
   waypointPai: {fileID: 2019644415}
   velocidade: 10
@@ -82551,7 +82551,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302455310}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -84166,7 +84166,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334331905}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -90733,7 +90733,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404481688}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -96118,7 +96118,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469632376}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -99616,10 +99616,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorDistancia: 10
+  sensorDistancia: 7
   layerObstaculos:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 64
   podeAcelerar: 0
   waypointPai: {fileID: 2019644415}
   velocidade: 10
@@ -101820,7 +101820,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1560052862}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -103086,7 +103086,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572891710}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -109648,7 +109648,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679715672}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -121834,7 +121834,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887340001}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -134214,10 +134214,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16ee5877abeb7a469eea585ec6d9fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorDistancia: 10
+  sensorDistancia: 7
   layerObstaculos:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 64
   podeAcelerar: 0
   waypointPai: {fileID: 2019644415}
   velocidade: 10
@@ -134954,8 +134954,8 @@ MeshFilter:
 --- !u!1 &2092204036
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 8153035275132220620, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-  m_PrefabInstance: {fileID: 768030978637062991}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -134973,8 +134973,8 @@ GameObject:
 --- !u!4 &2092204037
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1862808509422316567, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-  m_PrefabInstance: {fileID: 768030978637062991}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092204036}
   serializedVersion: 2
@@ -134988,8 +134988,8 @@ Transform:
 --- !u!65 &2092204038
 BoxCollider:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6630581470156657596, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-  m_PrefabInstance: {fileID: 768030978637062991}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092204036}
   m_Material: {fileID: 0}
@@ -135009,11 +135009,11 @@ BoxCollider:
 --- !u!23 &2092204039
 MeshRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 7291859883772197579, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-  m_PrefabInstance: {fileID: 768030978637062991}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092204036}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -135054,8 +135054,8 @@ MeshRenderer:
 --- !u!33 &2092204040
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1944785471818287570, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-  m_PrefabInstance: {fileID: 768030978637062991}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092204036}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
@@ -137689,63 +137689,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146340349}
   m_Mesh: {fileID: 5150667549442036198, guid: 300f737daa402f940acd2561787383df, type: 3}
---- !u!1001 &768030978637062991
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2019644415}
-    m_Modifications:
-    - target: {fileID: 1862808509422316567, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 65.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 1862808509422316567, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 1862808509422316567, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 89.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 1862808509422316567, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1862808509422316567, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1862808509422316567, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1862808509422316567, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1862808509422316567, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1862808509422316567, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1862808509422316567, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8153035275132220620, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
-      propertyPath: m_Name
-      value: 01
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 103840b48d1935a48aaa928e9d8914d1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
