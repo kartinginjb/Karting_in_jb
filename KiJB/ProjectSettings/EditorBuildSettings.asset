@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cenas/Karts.unity
     guid: 651efd7cfc6fd3449b5511fe04c0dad1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Cenas/Open_world.unity
     guid: 175d6981bc38935469efd05537d99355
   - enabled: 1
@@ -25,19 +25,22 @@ EditorBuildSettings:
     guid: 63f9e72b27cb26c4a8f51bee464a98e5
   - enabled: 1
     path: Assets/Cenas/Pista2_Melga.unity
-    guid: 58ea0cb04b0a43549b940ef4ff7f66d9
+    guid: ae3b30cf8a4663e4382db7dfc2e75636
   - enabled: 1
     path: Assets/Cenas/Pista3_Campo.unity
     guid: feeb5f1f6f471684b9af0949f4f03fda
   - enabled: 1
     path: Assets/Cenas/Pista4_Basica.unity
-    guid: 219d81f2116c689489a91adb624a0204
+    guid: b8e4610bd2d7c4e4189bc80ecebd8fad
   - enabled: 1
     path: Assets/Cenas/Pista5_DiasSpeed.unity
-    guid: 59650d4ff561f564e98319059d75ceb8
+    guid: 9e0d9835fc2c84148bbaeccd2a9b1a44
   - enabled: 1
     path: Assets/Cenas/Pista6_Jedonaco.unity
     guid: 2b6ae7bcd57bf4b4ba1bcd7b95cbc7e9
+  - enabled: 1
+    path: Assets/Cenas/OptionsMenu.unity
+    guid: 774fc973c12702646a0a18150ab9910f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

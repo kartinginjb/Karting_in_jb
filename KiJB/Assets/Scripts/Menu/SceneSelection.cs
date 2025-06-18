@@ -28,6 +28,9 @@ public class SceneSelectScript : MonoBehaviour
             case "Campo":
                 SceneManager.LoadScene("Pista3_Campo");
                 break;
+            case "Settings":
+                SceneManager.LoadScene("OptionsMenu");
+                break;
         }
     }
 }
