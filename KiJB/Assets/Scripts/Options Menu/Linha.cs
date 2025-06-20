@@ -3,19 +3,22 @@ using UnityEngine.UI;
 
 public class LinhaCorridaManager : MonoBehaviour
 {
-    public Toggle toggleLinhaCorrida;
-    public GameObject[] linhasCorrida; // 6 objetos (1 para cada pista)
+    public Toggle toggleLinhaCorrida; // Este será nulo noutras cenas
+    public GameObject[] linhasCorrida;
 
     void Start()
     {
-        // Carrega valor salvo, padrão é 1 (ativo)
         int estadoSalvo = PlayerPrefs.GetInt("LinhaCorridaAtiva", 1);
         bool ativo = estadoSalvo == 1;
 
-        toggleLinhaCorrida.isOn = ativo;
-        AtualizarLinhas(ativo);
+        // Se o Toggle existir, atualiza-o
+        if (toggleLinhaCorrida != null)
+        {
+            toggleLinhaCorrida.isOn = ativo;
+            toggleLinhaCorrida.onValueChanged.AddListener(AtualizarLinhas);
+        }
 
-        toggleLinhaCorrida.onValueChanged.AddListener(AtualizarLinhas);
+        AtualizarLinhas(ativo); // Sempre ativa/desativa as linhas
     }
 
     void AtualizarLinhas(bool ativar)
