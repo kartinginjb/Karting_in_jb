@@ -126001,7 +126001,7 @@ MonoBehaviour:
   voltas: 0
   drs:
   - {fileID: 1694378146}
-  somCarro: {fileID: 8300000, guid: 3823b55c028d44e4983bc855abd24b22, type: 3}
+  somCarro: {fileID: 8300000, guid: 88602b586898b3644a4bf56c51fbaad5, type: 3}
   audioCarro: {fileID: 1953847821}
 --- !u!4 &1953847819
 Transform:
@@ -126065,10 +126065,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3823b55c028d44e4983bc855abd24b22, type: 3}
-  m_Resource: {fileID: 8300000, guid: 3823b55c028d44e4983bc855abd24b22, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 88602b586898b3644a4bf56c51fbaad5, type: 3}
+  m_Resource: {fileID: 8300000, guid: 88602b586898b3644a4bf56c51fbaad5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
